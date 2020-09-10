@@ -1,0 +1,79 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrap{
+  flex: 1;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.my-header{
+  background-color: red;
+  border: 3px solid #9a5a00;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 10px solid #dd8100;
+} 
+
+.top-bar{
+  background-color: #523001;
+  right: -100px;
+}
+
+.buttons{
+  color: white;
+  text-align: right;
+}
+
+.LoginButton,
+.RegisterButton{
+  padding-right: 20px;
+}
+
+.ProfileSeperation{
+  padding-right: 30px;
+}
+
+a:visited, a:link, a:active, a:hover {
+  color: orange;
+}
+
+.my-navbar{
+  padding: 4px;
+  font-size: 1.3em;
+  padding: 10px;
+  text-emphasis-color: orange;
+  text-align: center;
+
+}
+
+.my-item{
+  width: 500px;
+}
+
+.my-container{
+  text-emphasis-color: orange;
+}
+
+.my-dropdown{
+  padding-left: 20px;
+}
+
+h1{
+  color: orange;
+}
