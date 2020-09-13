@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import {Container, Row, Col, Card, Button, Form, InputGroup} from 'react-bootstrap'
 import util from "./util"
 import validator from 'validator'
 
-// import {withRouter} from 'react-router-dom'
+import Router, {useRouter, withRouter} from 'next/router'
+
+import {UserContext} from '../../utils/UserContext'
+
 
 const initialState = {
     rate: "",
@@ -24,8 +27,10 @@ class RSGPBox extends React.Component {
     constructor(props){
         super(props);
         this.state= initialState;
+
     }
 
+    static contextType = UserContext
 
 
     onInputChange = (event) => {
@@ -90,20 +95,21 @@ class RSGPBox extends React.Component {
         event.preventDefault()
         const data = this.state
         const isValid = this.validate();
+        const { user, setUser } = this.context
         if (isValid) {
             console.log("handleSubmit is working!")
             console.log("RSGPBox.handleSubmit data", data)
-            //redirect form
-            this.props.history.push({
-                pathname:'/checkout-summary',
-                state: {
-                    data
-                }
-            });
-            // window.location.reload(false);
-        }
-
-        
+            setUser({
+                rate: data.rate, 
+                amount: data.rsgpAmount,
+                characterName: data.characterName, 
+                email: data.email, 
+                title: data.title
+            })
+            Router.push({
+                pathname: '/checkout-summary'
+            })          
+        }    
     }
 
 
@@ -113,7 +119,7 @@ class RSGPBox extends React.Component {
             rate: this.props.rate,
             rsgpAmount: '',
             usdAmount: this.props.rate * 0,
-            
+
         })
     }
 
@@ -136,7 +142,7 @@ class RSGPBox extends React.Component {
                                         <Col md={5}>
                                             <InputGroup>
                                                 <Form.Control 
-                                                    type="text" 
+                                                    type="number" 
                                                     placeholder="RSGP" 
                                                     value={util.formatNumber(rsgpAmount)} 
                                                     onChange={(e) => {this.onChangeAmounts(e, 'A');
@@ -156,7 +162,7 @@ class RSGPBox extends React.Component {
                                                     <InputGroup.Text>$</InputGroup.Text>
                                                 </InputGroup.Prepend>
                                                 <Form.Control 
-                                                    type="text" 
+                                                    type="number" 
                                                     placeholder="USD" 
                                                     value={util.formatNumber(usdAmount)} 
                                                     onChange={(e) => {this.onChangeAmounts(e, 'B');
@@ -178,7 +184,7 @@ class RSGPBox extends React.Component {
                             <Form.Text className="text-muted">
                                 We'll never share your Character Name or Email with anyone else.
                             </Form.Text>
-                            <Button variant="warning" type="submit" style={{display: 'block', marginLeft: 'auto', marginRight: 'auto'}}><b>Purchase Now (${util.formatNumber(usdAmount)})</b></Button>
+                                <Button variant="warning" type="submit"><b>Purchase Now (${util.formatNumber(usdAmount)})</b></Button>
                         </Form>
                     </Card.Body>
                 </Card>
@@ -187,4 +193,4 @@ class RSGPBox extends React.Component {
     }
 }
 
-export default (RSGPBox);
+export default withRouter(RSGPBox);

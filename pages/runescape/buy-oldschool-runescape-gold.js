@@ -1,15 +1,15 @@
 import React from 'react'
 import { Helmet } from 'react-helmet';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { useFetch } from "../hooks";
+import { useFetch } from "../../hooks";
 
-// import GeneralInformation from '../components/layouts/GeneralInformation';
-// import HowToBegin from '../components/layouts/HowToBegin.js';
-// import RWTInformation from '../components/layouts/RWTInformation';
-import RSGPBox from '../components/ExtraComponents/RSGPBox'
+import GeneralInformation from '../../components/layouts/GeneralInformation';
+import HowToBegin from '../../components/layouts/HowToBegin.js';
+import RWTInformation from '../../components/layouts/RWTInformation';
+import RSGPBox from '../../components/ExtraComponents/RSGPBox'
 
-import OSRSLogo from '../assets/osrs-logo.png';
-import { apiURL } from '../utils/apiURL'
+import OSRSLogo from '../../assets/osrs-logo.png';
+import { apiURL } from '../../utils/apiURL'
 
 function BuyOSRS() {
 
@@ -93,9 +93,9 @@ function BuyOSRS() {
                 </Row>
             </Container>
 
-            {/* < RWTInformation />
+            < RWTInformation />
             < GeneralInformation />
-            < HowToBegin />  */}
+            < HowToBegin /> 
             </>
         )}
     </>

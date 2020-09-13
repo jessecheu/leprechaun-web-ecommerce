@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import '../../pages/pages.css';
 import GamingLogo from '../../assets/gaminglogo.png';
 
 function RWTInformation() {

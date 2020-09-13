@@ -1,11 +1,16 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
 import Header from '../components/layouts/Header'
 import NavBar from '../components/layouts/NavBar'
 import Footer from '../components/layouts/Footer'
 import Head from 'next/head';
+import { UserContext } from '../utils/UserContext'
 
 function MyApp({ Component, pageProps }) {
+  const [user, setUser] = useState({})
+
+
   return(
     <div>
       <Head>
@@ -43,9 +48,9 @@ function MyApp({ Component, pageProps }) {
         <div className="content-wrap" style={{flex: '1'}}>
           <Header />
           <NavBar />
-
-          <Component {...pageProps} />
-
+          <UserContext.Provider value={{user, setUser}}>
+            <Component {...pageProps} />
+          </UserContext.Provider>   
           
         </div>
         <Footer />
