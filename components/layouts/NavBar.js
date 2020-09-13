@@ -31,7 +31,7 @@ export const NavBar = () => {
                     <ReactBootStrap.NavDropdown.Divider />
                 </ReactBootStrap.NavDropdown>
                 <ReactBootStrap.NavDropdown title="Miscellaneous" id="basic-nav-dropdown">
-                    <ReactBootStrap.NavDropdown.Item href="/video-game-giftcards">Video Game Giftcards</ReactBootStrap.NavDropdown.Item>
+                    <ReactBootStrap.NavDropdown.Item href="/miscellaneous/video-game-giftcards">Video Game Giftcards</ReactBootStrap.NavDropdown.Item>
                     <ReactBootStrap.NavDropdown.Divider />
                     {/* <ReactBootStrap.NavDropdown.Item href="#action/3.4"><img src={NewIcon} alt="New-Icon" width="22px" height="22px"/> N/A</ReactBootStrap.NavDropdown.Item> */}
                 </ReactBootStrap.NavDropdown>   

@@ -23,9 +23,9 @@ function Home() {
                     <Card style={{  }}>
                     <Card.Header>Runescape</Card.Header>
                         <ListGroup variant="flush">
-                            <ListGroup.Item style={{backgroundColor: 'red', fontSize: '2rem', fontWeight: 'bold'}}><a href="/buy-oldschool-runescape-gold">Purchase OSRS</a></ListGroup.Item>
-                            <ListGroup.Item style={{backgroundColor: 'blue', fontSize: '2rem', fontWeight: 'bold'}}><a href="/buy-runescape-3-gold">Purchase RS3</a></ListGroup.Item>
-                            <ListGroup.Item style={{backgroundColor: 'green', fontSize: '2rem', fontWeight: 'bold'}}><a href="/sell-oldschool-runescape-gold">Sell RS</a></ListGroup.Item>
+                            <ListGroup.Item style={{backgroundColor: 'red', fontSize: '2rem', fontWeight: 'bold'}}><a href="/runescape/buy-oldschool-runescape-gold">Purchase OSRS</a></ListGroup.Item>
+                            <ListGroup.Item style={{backgroundColor: 'blue', fontSize: '2rem', fontWeight: 'bold'}}><a href="/runescape/buy-runescape-3-gold">Purchase RS3</a></ListGroup.Item>
+                            <ListGroup.Item style={{backgroundColor: 'green', fontSize: '2rem', fontWeight: 'bold'}}><a href="/runescape/sell-oldschool-runescape-gold">Sell RS</a></ListGroup.Item>
                         </ListGroup>
                     </Card>
                 </Col>
@@ -33,7 +33,7 @@ function Home() {
                 <Card style={{  }}>
                 <Card.Header>Misc</Card.Header>
                         <ListGroup variant="flush">
-                            <ListGroup.Item style={{backgroundColor: 'purple', fontSize: '2rem', fontWeight: 'bold'}}><a href="/video-game-giftcards">Purchase Discounted Video Game Giftcards</a></ListGroup.Item>
+                            <ListGroup.Item style={{backgroundColor: 'purple', fontSize: '2rem', fontWeight: 'bold'}}><a href="/miscellaneous/video-game-giftcards">Purchase Discounted Video Game Giftcards</a></ListGroup.Item>
                         </ListGroup>
                     </Card>
                 </Col>

@@ -77,3 +77,29 @@ a:visited, a:link, a:active, a:hover {
 h1{
   color: orange;
 }
+
+
+
+
+.first-column{
+  text-align: center;
+  padding: 10px;
+
+}
+
+.my-table{
+  text-align: left;
+  border-style: solid;
+  border-color: orange;
+}
+
+.table-column{
+  border-style: solid;
+  border-color: orange;
+  border-bottom: 0px;
+}
+
+.row-column{
+  padding: 10px;
+  border-color: orange;
+}
