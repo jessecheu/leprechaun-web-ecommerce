@@ -24,6 +24,7 @@
     "react-router-dom": "^5.2.0",
     "react-timestamp": "^5.1.0",
     "sass": "^1.26.10",
+    "strapi-sdk-javascript": "^0.3.3",
     "validator": "^13.1.1"
   },
   "devDependencies": {
