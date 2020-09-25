@@ -20,3 +20,13 @@ collections:
           fields:
             - { label: "Name", name: "name", widget: "string"}
             - { label: "Description", name: "description", widget: "text"}
+  - name: "termsofservice"
+    label: "Terms of Service"
+    files:
+    - label: "Terms of Service"
+      name: "termsofservice"
+      file: "content/termsofservice.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Body", name: "body", widget: "markdown"}
