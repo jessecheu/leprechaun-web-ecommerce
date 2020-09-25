@@ -1,8 +1,6 @@
 import React from 'react'
-import axios from 'axios'
 
 import Helmet from 'react-helmet'
-
 import { Container} from 'react-bootstrap';
 import Timestamp from 'react-timestamp'
 
@@ -16,15 +14,16 @@ class Privacy extends React.Component {
         return (
             <div>
                 <Helmet>
-                <title>{title}</title>
+                <title>RPGStock | Privacy Page</title>
                 <meta name="description" content="RPGStock Privacy Policy" />
                 </Helmet>
                 <div style={{textAlign: 'center'}}>
-                    <h1>RPGStock Privacy Policy</h1>
+                    <h1>{title}</h1>
                     <p>Last updated: <Timestamp date={date} /></p>
+                    { PrivacyContent }
                 </div>
                 <Container>
-                    {PrivacyContent}
+                    
                 </Container>
             </div>
         )
