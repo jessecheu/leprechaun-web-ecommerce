@@ -8,6 +8,8 @@ import GiftcardProductCard from './GiftcardProductCard'
 
 import { apiURL } from '../../utils/apiURL'
 
+import {attributes, react as Content} from '../../content/pricingandrates.md'
+
 class VGGiftCard extends React.Component{
     state = {
         fetchedGiftcards: [],
@@ -31,10 +33,12 @@ class VGGiftCard extends React.Component{
         this.setState({fetchedGiftcards, fetchedDiscountValue})
     }
 
+    
+
     render(){
 
         const {fetchedGiftcards, fetchedDiscountValue} = this.state
-
+        const { giftcarddiscount } = attributes;
         return(
         <div className="VGGiftcard">
             <Helmet>
@@ -43,7 +47,7 @@ class VGGiftCard extends React.Component{
             </Helmet>
             <div style={{textAlign: 'center'}}>
                 <h1>Video game Giftcards</h1>
-                <h2>We are currently offering {fetchedDiscountValue}% of the giftcard value</h2>
+                <h2>We are currently offering {giftcarddiscount}% of the giftcard value</h2>
                 <br />
             </div>
             <Container fluid>

@@ -32,12 +32,13 @@ collections:
       file: "content/paymentmethods.md"
       fields:
         - { label: "Body", name: "body", widget: "markdown"}
-  - name: "rsrates"
-    label: "Runescape Rates"
+  - name: "pricingandrates"
+    label: "Pricing and Rates"
     files:
-    - label: "Runescape Rates"
-      name: "rsrates"
-      file: "content/runescaperates.md"
+    - label: "Pricing and Rates"
+      name: "pricingandrates"
+      file: "content/pricingandrates.md"
       fields:
-        - { label: "osrsrate", name: "osrsrate", widget: "number"}
-        - { label: "Body", name: "body", widget: "markdown"}
+        - { label: "Old School Runescape Rate (07)", name: "osrsrate", widget: "number"}
+        - { label: "Runescape 3 Rate (RS3)", name: "rs3rate", widget: "number"}
+        - { label: "Giftcard Discount Percentage", name: "giftcarddiscount", widget: "number"}

@@ -4,18 +4,16 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import GeneralInformation from '../../components/layouts/GeneralInformation';
 import HowToBegin from '../../components/layouts/HowToBegin.js';
 import RWTInformation from '../../components/layouts/RWTInformation';
-
-import { useFetch } from "../../hooks";
-import { apiURL } from '../../utils/apiURL'
 import RSGPBox from '../../components/ExtraComponents/RSGPBox'
+import {attributes, react as Content} from '../../content/pricingandrates.md'
 
 function BuyRS3() {
 
-    const [response, loading] = useFetch(`${apiURL}/rsgp-price`);
+    const { rs3rate } = attributes;
 
     return (
         <>
-        {loading ? (
+        {!rs3rate ? (
             <div>
                 <h1>Loading... Loading... PLEASE CONTACT SUPPORT IF YOU SEE THIS!</h1>
             </div>
@@ -31,7 +29,7 @@ function BuyRS3() {
             </div>
             <Container fluid>
                 <Row className="justify-content-center">
-                    <RSGPBox title="Runescape 3 Gold" rate={response.data.rs3price}/>
+                    <RSGPBox title="Runescape 3 Gold" rate={rs3rate}/>
                 </Row>
                 <Row>
                     <Col xs={4}>

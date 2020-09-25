@@ -1,22 +1,23 @@
 import React from 'react'
 import { Helmet } from 'react-helmet';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { useFetch } from "../../hooks";
 
 import GeneralInformation from '../../components/layouts/GeneralInformation';
 import HowToBegin from '../../components/layouts/HowToBegin.js';
 import RWTInformation from '../../components/layouts/RWTInformation';
 import RSGPBox from '../../components/ExtraComponents/RSGPBox'
-
 import OSRSLogo from '../../assets/osrs-logo.png';
-import { apiURL } from '../../utils/apiURL'
+
+import { attributes, react as Content } from '../../content/pricingandrates.md';
 
 function BuyOSRS() {
 
-    const [response, loading] = useFetch(`${apiURL}/rsgp-price`);
+    const {osrsrate} = attributes;
+    console.log(osrsrate)
+
     return (
         <>
-        {loading ? (
+        {!osrsrate ? (
             <div>
                 <h1>Loading... Loading... PLEASE CONTACT SUPPORT IF YOU SEE THIS!</h1>
             </div>
@@ -30,7 +31,7 @@ function BuyOSRS() {
             < hr/>
             <Container>
                 <Row className="justify-content-center">
-                    <RSGPBox title={"Old School Runescape Gold"} rate={response.data.osrsprice}/>
+                    <RSGPBox title={"Old School Runescape Gold"} rate={osrsrate}/>
                 </Row>
             </Container>
             <Container fluid>
