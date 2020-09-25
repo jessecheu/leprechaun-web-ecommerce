@@ -12,10 +12,10 @@ class Header extends Component {
             <div className="buttons">
               <p className="ProfileSeperation">
                 Welcome
-                <a href="/profile">View Profile</a>
+                {/* <a href="/profile">View Profile</a>
                 <a href="/">
                   Logout
-                </a>
+                </a> */}
               </p>
             </div>
           </div>

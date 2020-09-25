@@ -32,3 +32,12 @@ collections:
       file: "content/paymentmethods.md"
       fields:
         - { label: "Body", name: "body", widget: "markdown"}
+  - name: "rsrates"
+    label: "Runescape Rates"
+    files:
+    - label: "Runescape Rates"
+      name: "rsrates"
+      file: "content/runescaperates.md"
+      fields:
+        - { label: "osrsrate", name: "osrsrate", widget: "number"}
+        - { label: "Body", name: "body", widget: "markdown"}
