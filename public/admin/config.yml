@@ -24,3 +24,11 @@ collections:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Publish Date", name: "date", widget: "datetime" }
         - { label: "Body", name: "body", widget: "markdown"}
+  - name: "paymentmethods"
+    label: "Payment Methods"
+    files:
+    - label: "Payment Methods"
+      name: "paymentmethods"
+      file: "content/paymentmethods.md"
+      fields:
+        - { label: "Body", name: "body", widget: "markdown"}

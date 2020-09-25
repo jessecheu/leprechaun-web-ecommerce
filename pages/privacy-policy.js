@@ -14,20 +14,20 @@ class Privacy extends React.Component {
         return (
             <div>
                 <Helmet>
-                <title>RPGStock | Privacy Page</title>
-                <meta name="description" content="RPGStock Privacy Policy" />
+                    <title>RPGStock | Privacy Page</title>
+                    <meta name="description" content="RPGStock Privacy Policy" />
                 </Helmet>
+                <Container>
                 <div style={{textAlign: 'center'}}>
                     <h1>{title}</h1>
                     <p>Last updated: <Timestamp date={date} /></p>
-                    { PrivacyContent }
                 </div>
-                <Container>
-                    
+                    <PrivacyContent />
+                <br />
                 </Container>
             </div>
         )
     }
 }
 
-export default Privacy
+export default Privacy;

@@ -8,25 +8,11 @@ import Timestamp from 'react-timestamp'
 
 import { apiURL } from '.././utils/apiURL'
 
+import { attributes, react as Content } from '../content/paymentmethods.md';
+
 class PaymentMethods extends React.Component{
-    state={
-        fetchedContent: ''
-    }
-
-    async componentDidMount(){
-        const contentRes = await axios({
-            method: 'GET',
-            url: `${apiURL}/paymentmethods`
-        })
-        const fetchedContent = contentRes.data
-
-        this.setState({fetchedContent})
-
-    }
 
     render(){
-        const {fetchedContent} = this.state
-
         return (
             <div>
             <Helmet>
@@ -39,9 +25,8 @@ class PaymentMethods extends React.Component{
                 </Row>
             </Container>
             <Container>
-                <ReactMarkdown className="left-positioned-text">
-                    {fetchedContent.content}
-                </ReactMarkdown>
+                <Content />
+                <br />
             </Container>
             </div>
         )

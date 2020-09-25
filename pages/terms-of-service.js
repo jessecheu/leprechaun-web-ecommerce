@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 
 import { Helmet } from 'react-helmet';
 import Timestamp from 'react-timestamp'
@@ -26,6 +25,7 @@ class termsofservice extends React.Component {
                 </div>
                     <TosContent />
                 <p>If you have any questions about these Terms and Conditions, You can contact us at admin@rpgstock.com</p>
+                <br />
             </Container>
         </div>
     )
