@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import axios from 'axios'
 
 import {Container, Row, CardGroup, Alert} from 'react-bootstrap'
-import AccountsCard from './[AccountStore]/AccountsCard';
+import AccountsCard from '../../components/ExtraComponents/AccountStore/AccountsCard';
 import SearchBox from '../../components/ExtraComponents/SearchBox'
 
 import HowToBegin from '../../components/layouts/HowToBegin';

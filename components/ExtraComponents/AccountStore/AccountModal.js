@@ -40,7 +40,7 @@ function AccountModal(props) {
                     <b>Identifier: {props.identifier}</b>
                     <br />
                     <Button style={{width: '18rem' }}variant="warning">
-                        <b>{`PRICE: ${util.formatCurrency(props.price)}`}</b>
+                        <b>{`PRICE: $ ${util.formatNumber(props.price)}`}</b>
                     </Button>
                 </ListGroupItem>
             </ListGroup>

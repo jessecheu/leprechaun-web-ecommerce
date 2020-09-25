@@ -45,7 +45,7 @@ const AccountsCard =  ({id, identifier, title, gamemode, price, thumbnail, descr
             </ListGroup>
             <Card.Footer>
                     <Button variant="warning" className="price-height" onClick={() => setModalShow(true)}>
-                        <b>{`PRICE: ${util.formatCurrency(price)}`}</b>
+                        <b>{`PRICE: $ ${util.formatNumber(price)}`}</b>
                     </Button>
                     <AccountModal
                         show={modalShow}
