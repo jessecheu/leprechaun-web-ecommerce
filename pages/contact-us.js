@@ -1,63 +1,60 @@
-import React, { Component, useState } from 'react'
+import React from 'react'
+import { Helmet } from 'react-helmet';
+import { Container,Row, Col } from 'react-bootstrap';
+import EmailContactForm from './General/EmailContactForm';
 
-const EmailContactForm = () => {    
-    const [ values, setValues ] = useState({
-        email: "", 
-        subject: "", 
-        message: "",
-        errorEmail: "",
-        errorSubkect: "",
-        errorMessage: ""
-    });
-
+function Contact() {
     return (
-        <div className="my-form-container">
-            <form>
-                {/* {Single Item} */}
-                    <div className="singleItem">
-                    <label htmlFor="email">Email</label>
-                    <input 
-                        type="text"
-                        id="email"
-                        name="email" 
-                        className="email" 
-                        placeholder="Email (required)"
-                    />
-                </div> 
-                {/* End Single Item */}
+        <div>
+        <Helmet>
+            <title>RPGStock | Contact</title>
+            <meta name="description" content="Contact RPGStock Adminsitrators with Email" />
+            {/* <!-- Begin Mailchimp Signup Form --> */}
+        </Helmet>
+        <h1> Contact US </h1>
+        < hr />
+        <Container>
+            <Row>
+                <Col>
+                    < EmailContactForm />   
+                </Col>
+            </Row>
+            < br />
+            < br />
+            < br />
+            <Row>
+                <Col sm={6}>
+                    <iframe src="https://discord.com/widget?id=725546040492556389&theme=dark" width="350" height="500" allowtransparency="true" frameBorder="0"></iframe>
+                </Col>
+                <Col md={6}>
+                    <h1>Discord</h1>
+                    <p className="left-positioned-text">
+                        Join us on discord via the widget on the <b>left</b>.
+                        You can also add us on Discord manually. 
+                    </p>
+                    <p >
+                        Discord: rpgstock#0777 (case sensitive)
+                        < br />
+                        UID: 574588629343797257
+                        < br />
+                        Please beware of Discord impersonators. Use Live Chat to confirm it is indeed us.
+                    </p>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <h1>Skype</h1>
+                    <p>
+                        live:pageth (case sensitive)
+                        < br />
+                        Please beware of Skype impersonators. Use Live Chat to confirm it is indeed us.
+                    </p>
+                </Col>
+            </Row>
+        </Container>
 
-                {/* {Single Item} */}
-                <div className="singleItem">
-                    <label htmlFor="subject">Subject</label>
-                    <input 
-                        type="text"
-                        id="subject"
-                        name="subject" 
-                        className="subject" 
-                        placeholder="Subject (required)"
-                    />
-                </div>
-                {/* End Single Item */}
-
-                {/* {Single Item} */}
-                <div className="textArea singleItem">
-                    <label htmlFor="message">Message</label>
-                    <textarea 
-                        name="message" 
-                        id="message" col="30"
-                        row="15" 
-                        placeholder="Message"
-                    >
-                    </textarea>
-                </div>
-                {/* End Single Item */}
-                <div className="btn">
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-            <h6>Email: admin@rpgstock.com</h6>
         </div>
-    );
-};
+    )
+}
 
-export default EmailContactForm;
+export default Contact;
