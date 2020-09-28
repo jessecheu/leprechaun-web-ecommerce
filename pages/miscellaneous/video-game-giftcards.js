@@ -8,7 +8,7 @@ import GiftcardProductCard from './GiftcardProductCard'
 
 import { apiURL } from '../../utils/apiURL'
 
-import {attributes, react as Content} from '../../content/pricingandrates.md'
+import {attributes, react as Content} from '../../content/videogamegiftcards.md'
 
 class VGGiftCard extends React.Component{
     state = {
@@ -17,18 +17,13 @@ class VGGiftCard extends React.Component{
     }
 
     async componentDidMount(){
-        const giftcardsRes = await axios({
-            method: 'GET',
-            url: `${apiURL}/videogame-giftcards`
-        })
-        const fetchedGiftcards = giftcardsRes.data
 
-        const discountValueRes = await axios({
-            method: 'GET',
-            url: `${apiURL}/giftcard-discount`
-        })
+        const { giftcarddiscount, giftcards } = attributes;
 
-        const fetchedDiscountValue = discountValueRes.data.value
+        console.log(giftcards)
+
+        const fetchedGiftcards = giftcards
+        const fetchedDiscountValue = giftcarddiscount
 
         this.setState({fetchedGiftcards, fetchedDiscountValue})
     }
@@ -38,7 +33,7 @@ class VGGiftCard extends React.Component{
     render(){
 
         const {fetchedGiftcards, fetchedDiscountValue} = this.state
-        const { giftcarddiscount } = attributes;
+
         return(
         <div className="VGGiftcard">
             <Helmet>
@@ -47,7 +42,7 @@ class VGGiftCard extends React.Component{
             </Helmet>
             <div style={{textAlign: 'center'}}>
                 <h1>Video game Giftcards</h1>
-                <h2>We are currently offering {giftcarddiscount}% of the giftcard value</h2>
+                <h2>We are currently offering {fetchedDiscountValue}% of the giftcard value</h2>
                 <br />
             </div>
             <Container fluid>
@@ -55,9 +50,9 @@ class VGGiftCard extends React.Component{
                     {fetchedGiftcards.map(giftcard => (
                         <GiftcardProductCard 
                             name={giftcard.name}
-                            description={giftcard.description}
-                            thumbnail={giftcard.thumbnail && giftcard.thumbnail.url}
-                            denomination={giftcard.denomination}
+                            // description={giftcard.description}
+                            // thumbnail={giftcard.thumbnail && giftcard.thumbnail.url}
+                            denomination={giftcard.denominations}
                         />
                     ))}
                 </Row>

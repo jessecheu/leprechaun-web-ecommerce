@@ -52,8 +52,6 @@ collections:
       file: "content/videogamegiftcards.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
-        - { label: "Denominations", name: "denominations", widget: "string" }
-        - { label: "Giftcard Image", name: "image", widget: "image", default: "/uploads/test.jpg" }
         - label: 'Video Game Giftcards'
           name: "videogamegiftcards"
           widget: list
