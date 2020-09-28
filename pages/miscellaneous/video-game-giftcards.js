@@ -1,14 +1,10 @@
 import React from 'react'
-import axios from 'axios';
 
 import { Helmet} from 'react-helmet';
 import { Container, Row, Alert} from 'react-bootstrap';
 
 import GiftcardProductCard from './GiftcardProductCard'
 
-import { apiURL } from '../../utils/apiURL'
-
-// import { prices } from '../../content/pricingandrates.md';
 import { attributes } from '../../content/videogamegiftcards.md';
 
 class VGGiftCard extends React.Component{
@@ -50,10 +46,10 @@ class VGGiftCard extends React.Component{
             <Container fluid>
                 <Row className="justify-content-center">
                     {fetchedGiftcards.map(giftcard => (
-                        <GiftcardProductCard 
+                        <GiftcardProductCard
+                            key={giftcard.name} 
                             name={giftcard.name}
-                            // description={giftcard.description}
-                            // thumbnail={giftcard.thumbnail && giftcard.thumbnail.url}
+                            thumbnail={giftcard.image}
                             denomination={giftcard.denominations}
                         />
                     ))}

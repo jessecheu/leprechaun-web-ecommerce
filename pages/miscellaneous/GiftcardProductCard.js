@@ -3,8 +3,10 @@ import ReactMarkdown from "react-markdown";
 
 import { Row, Col } from 'react-bootstrap';
 
-export default ({name, description, thumbnail, denomination}) => {
+const GiftcardCard =  ({name, description, thumbnail, denomination}) => {
     
+
+
     return(
     <div className="GiftcardProductCard">
         <Col md={12}>
@@ -20,5 +22,7 @@ export default ({name, description, thumbnail, denomination}) => {
     </div>
     )
 }
+
+export default GiftcardCard;
 
 
