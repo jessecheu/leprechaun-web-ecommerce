@@ -19,11 +19,12 @@ class VGGiftCard extends React.Component{
 
     async componentDidMount(){
 
-        const { giftcards, giftcarddiscount } = attributes;
-        console.log("giftcards", giftcards)
+        const { videogamegiftcards, giftcarddiscount } = attributes;
+
+        console.log("giftcards", videogamegiftcards)
         console.log("giftcarddiscount", giftcarddiscount)
 
-        const fetchedGiftcards = giftcards
+        const fetchedGiftcards = videogamegiftcards
         const fetchedDiscountValue = giftcarddiscount
 
         this.setState({fetchedGiftcards, fetchedDiscountValue})
