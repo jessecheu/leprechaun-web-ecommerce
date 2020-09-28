@@ -9,8 +9,6 @@ import SearchBox from '../../components/ExtraComponents/SearchBox'
 
 import HowToBegin from '../../components/layouts/HowToBegin';
 
-import { apiURL } from '../../utils/apiURL'
-
 import { attributes, react as Content } from '../../content/runescapeaccounts.md';
 
 
@@ -24,15 +22,8 @@ class AccountStore extends Component {
     }
 
     async componentDidMount(){
-        const fetchAccountsRes = await axios({
-            method: 'GET',
-            url: `${apiURL}/runescape-accounts`
-        })
 
         const { accounts } = attributes;
-        console.log("accounts ",accounts)
-
-        // const fetchAccounts = fetchAccountsRes.data
         const fetchAccounts = accounts;
         this.setState({fetchedAccounts: fetchAccounts})
     }
@@ -86,7 +77,7 @@ class AccountStore extends Component {
                     </Row>
                 </Container>
                 </CardGroup> 
-                {fetchedAccounts >= 0 &&
+                {fetchedAccounts > 0 &&
                     <Alert variant={'warning'}>
                         <p>No Accounts Found</p>
                         <p>Please <a href="/contact">Contact Support</a> if you see this</p>

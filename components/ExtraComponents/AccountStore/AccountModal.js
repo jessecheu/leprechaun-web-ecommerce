@@ -53,9 +53,9 @@ function AccountModal(props) {
             </Card.Body>
         </Card>
         <a href="/test-checkout-page">
-            <Button variant="warning">
+            <center><Button variant="warning">
                 <b>Click here to purchase</b>
-            </Button> 
+            </Button> </center>
         </a> 
         </Modal.Body>
         <Modal.Footer>

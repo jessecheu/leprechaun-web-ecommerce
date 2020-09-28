@@ -10,10 +10,6 @@ import Timestamp from 'react-timestamp'
 
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
-import {apiURL} from '../../../utils/apiURL'
-
-
-
 
 const AccountsCard =  ({id, identifier, title, gamemode, price, thumbnail, description, categories, accountlevel, postAt}) => {
 
@@ -22,7 +18,7 @@ const AccountsCard =  ({id, identifier, title, gamemode, price, thumbnail, descr
     return(
         <>
         <Card style={{ width: '22rem', textAlign: 'center'}} bg={''} text={'dark'} border="warning">
-            <Card.Img variant="top" src={(thumbnail.url)} alt={title} height="400px" width="100%"/>
+            <Card.Img variant="top" src={(thumbnail)} alt={title} height="400px" width="100%"/>
             <Card.Body>
             <Card.Title>
                 {`${title} ${accountlevel}`}{categories}
@@ -38,9 +34,9 @@ const AccountsCard =  ({id, identifier, title, gamemode, price, thumbnail, descr
                 <ListGroupItem>
                     <b>Account Type: </b>{categories}
                     <br />
-                    <b>Game: {gamemode}</b>
+                    <b>Game: </b>{gamemode}
                     <br/>
-                    <b>Identifier: {identifier}</b>
+                    <b>Identifier: </b>{identifier}
                 </ListGroupItem>
             </ListGroup>
             <Card.Footer>
@@ -52,7 +48,7 @@ const AccountsCard =  ({id, identifier, title, gamemode, price, thumbnail, descr
                         onHide={() => setModalShow(false)}
                         title={title}
                         description={description}
-                        thumbnail={(thumbnail.url)}
+                        thumbnail={(thumbnail)}
                         identifier={identifier}
                         price={price}
                         categories={categories}
