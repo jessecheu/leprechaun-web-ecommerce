@@ -8,7 +8,8 @@ import GiftcardProductCard from './GiftcardProductCard'
 
 import { apiURL } from '../../utils/apiURL'
 
-import {attributes, react as Content} from '../../content/videogamegiftcards.md'
+// import { prices } from '../../content/pricingandrates.md';
+import { attributes } from '../../content/videogamegiftcards.md';
 
 class VGGiftCard extends React.Component{
     state = {
@@ -18,9 +19,9 @@ class VGGiftCard extends React.Component{
 
     async componentDidMount(){
 
-        const { giftcarddiscount, giftcards } = attributes;
-
-        console.log(giftcards)
+        const { giftcards, giftcarddiscount } = attributes;
+        console.log("giftcards", giftcards)
+        console.log("giftcarddiscount", giftcarddiscount)
 
         const fetchedGiftcards = giftcards
         const fetchedDiscountValue = giftcarddiscount

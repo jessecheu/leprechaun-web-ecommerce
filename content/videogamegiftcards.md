@@ -1,5 +1,6 @@
 ---
 title: Video Game Giftcards
+giftcarddiscount: 10
 giftcards:
   - name: 'Maru is a Scottish Fold from Japan, and he loves boxes.'
     denominations: '10, 20, 30'

@@ -52,6 +52,7 @@ collections:
       file: "content/videogamegiftcards.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
+        - { label: "Giftcard Discount Percentage", name: "giftcarddiscount", widget: "number"}
         - label: 'Video Game Giftcards'
           name: "videogamegiftcards"
           widget: list
