@@ -31,7 +31,7 @@ class VGGiftCard extends React.Component{
     render(){
 
         const {fetchedGiftcards, fetchedDiscountValue} = this.state
-
+        
         return(
         <div className="VGGiftcard">
             <Helmet>
@@ -39,8 +39,8 @@ class VGGiftCard extends React.Component{
                 <meta name="description" content="Purchase video game giftcards such as League of legend's Riot Point, PSN, XBox, and Apex Legends" />
             </Helmet>
             <div style={{textAlign: 'center'}}>
-                <h1>Video game Giftcards</h1>
-                <h2>We are currently offering {fetchedDiscountValue}% of the giftcard value</h2>
+                <h1>Video Game Giftcards</h1>
+                <h2>We are currently offering {fetchedDiscountValue}% discount of the giftcard value</h2>
                 <br />
             </div>
             <Container fluid>

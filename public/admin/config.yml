@@ -60,3 +60,22 @@ collections:
             - { label: "Denominations", name: "denominations", widget: "string" }
             - { label: "Giftcard Image", name: "image", widget: "image" }
             - { label: "Description", name: "description", widget: "string" }
+  - name: "runescapeaccounts"
+    label: "Runescape Accounts"
+    files:
+    - label: "Runescape Accounts"
+      name: "accounts"
+      file: "content/runescapeaccounts.md"
+      fields:
+        - label: 'Runescape Accounts'
+          name: "accounts"
+          widget: list
+          fields:
+            - { label: "Identifier", name: "name", widget: "string"}
+            - { label: "Title", name: "title", widget: "string"}
+            - { label: "Gamemode", name: "gamemode", widget: "select", options: ["OSRS", "RS3"]}
+            - { label: "Account Level", name: "accountlevel", widget: "select", options: ["Started", "Med", "Maxed"]}
+            - { label: "Price", name: "price", widget: "number"}
+            - { label: "Categories", name: "category", widget: "select", options: ["Main", "Pure", "Zerk", "Obby Mauler", "Skiller", "Misc", "Staker" ] }
+            - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+            - { label: "Description", name: "description", widget: "markdown" }

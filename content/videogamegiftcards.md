@@ -14,10 +14,8 @@ videogamegiftcards:
     description: This giftcard is currently only available for North America players.
     image: /img/xbox_gc_c076eee4fb.png
     name: XBox Giftcard
-  - denominations: >-
-      10 for 1,000 Apex Coins, 20 for 2,150 Apex Coins, 40 for 4,350 Apex Coins,
-      60 for 6,700 Apex Coins, 100 for 11,500 Apex Coins
-    description: This giftcard is currently only available for North America players.
+  - denominations: '10, 20, 40, 60, 100' 
+    description: This giftcard is currently only available for North America players. 
     image: /img/apex_legends_gc_e32cfdd8f1.jpg
     name: Apex Legends Coins Giftcard
   - denominations: '50,100'
