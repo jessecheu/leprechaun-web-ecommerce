@@ -3,21 +3,18 @@ import ReactMarkdown from "react-markdown";
 
 import { Row, Col } from 'react-bootstrap';
 
-const GiftcardCard =  ({name, description, thumbnail, denomination}) => {
+const GiftcardCard =  ({name, description, image, denomination}) => {
     
-
-
     return(
     <div className="GiftcardProductCard">
         <Col md={12}>
             <Row className="justify-content-center">
-                <img src={(thumbnail)} width="350px" height="450px"/>
+                <img src={(image)} width="350px" height="450px"/>
             </Row>
             <br />
-            <b>{name}</b>
-            <br />
+            <center><b>{name}</b></center>
                 <p><ReactMarkdown>{description}</ReactMarkdown></p>
-                <p>Available Denominations: <b>{denomination}</b></p>    
+                <center>Available Denominations: <b>{denomination}</b></center>
         </Col>
     </div>
     )

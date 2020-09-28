@@ -49,8 +49,9 @@ class VGGiftCard extends React.Component{
                         <GiftcardProductCard
                             key={giftcard.name} 
                             name={giftcard.name}
-                            thumbnail={giftcard.image}
+                            image={giftcard.image}
                             denomination={giftcard.denominations}
+                            description={giftcard.description}
                         />
                     ))}
                 </Row>

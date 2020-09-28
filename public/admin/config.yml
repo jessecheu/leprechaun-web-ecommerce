@@ -59,3 +59,4 @@ collections:
             - { label: "Name", name: "name", widget: "string"}
             - { label: "Denominations", name: "denominations", widget: "string" }
             - { label: "Giftcard Image", name: "image", widget: "image" }
+            - { label: "Description", name: "description", widget: "string" }
