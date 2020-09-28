@@ -11,6 +11,8 @@ import HowToBegin from '../../components/layouts/HowToBegin';
 
 import { apiURL } from '../../utils/apiURL'
 
+import { attributes, react as Content } from '../../content/runescapeaccounts.md';
+
 
 class AccountStore extends Component {
     constructor(props){
@@ -27,7 +29,11 @@ class AccountStore extends Component {
             url: `${apiURL}/runescape-accounts`
         })
 
-        const fetchAccounts = fetchAccountsRes.data
+        const { accounts } = attributes;
+        console.log("accounts ",accounts)
+
+        // const fetchAccounts = fetchAccountsRes.data
+        const fetchAccounts = accounts;
         this.setState({fetchedAccounts: fetchAccounts})
     }
 
@@ -70,11 +76,11 @@ class AccountStore extends Component {
                             title={account.title}
                             gamemode={account.gamemode}
                             price={account.price}
-                            thumbnail={account.thumbnail.url && account.thumbnail}
+                            thumbnail={account.thumbnail}
                             description={account.description}
-                            categories={account.categories}
+                            categories={account.category}
                             accountlevel={account.accountlevel}
-                            postAt={account.created_at}
+                            postAt={account.publishdate}
                         />
                         ))}  
                     </Row>

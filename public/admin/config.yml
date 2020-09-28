@@ -71,7 +71,7 @@ collections:
           name: "accounts"
           widget: list
           fields:
-            - { label: "Identifier", name: "name", widget: "string"}
+            - { label: "Identifier", name: "identifier", widget: "string"}
             - { label: "Title", name: "title", widget: "string"}
             - { label: "Gamemode", name: "gamemode", widget: "select", options: ["OSRS", "RS3"]}
             - { label: "Account Level", name: "accountlevel", widget: "select", options: ["Started", "Med", "Maxed"]}
@@ -79,3 +79,4 @@ collections:
             - { label: "Categories", name: "category", widget: "select", options: ["Main", "Pure", "Zerk", "Obby Mauler", "Skiller", "Misc", "Staker" ] }
             - { label: "Thumbnail", name: "thumbnail", widget: "image" }
             - { label: "Description", name: "description", widget: "markdown" }
+            - { label: "Publish Time", name: "publishdate", widget: "datetime", default: "", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL", picker_utc: false }
