@@ -9,6 +9,8 @@ import RWTInformation from '../../components/layouts/RWTInformation';
 
 import { apiURL } from '../../utils/apiURL'
 
+import { attributes, react as Content } from '../../content/pricingandrates.md';
+
 
 const initialState = {
     rate: "",
@@ -93,8 +95,10 @@ class swaprs3osrs extends React.Component {
             url: `${apiURL}/rsgp-price`
         })
 
+        const {rs3toosrsswap} = attributes;
+
         this.setState({
-            rate: rateRes.data.rs3osrsswap,
+            rate: rs3toosrsswap,
             
         })
     }

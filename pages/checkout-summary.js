@@ -62,9 +62,9 @@ class Checkout extends React.Component{
         if(user){
             this.setState({
                 product: user.title,
-                amountOfProduct: user.amount,
+                amountOfProduct: util.formatNumber(user.amount),
                 rateOfProduct: user.rate,
-                price: user.amount*user.rate,
+                price: util.formatNumber(user.amount*user.rate),
                 characterName: user.characterName,
                 email: user.email
             })

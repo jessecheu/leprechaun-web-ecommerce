@@ -19,9 +19,11 @@ export function GeneralInformation() {
                         use only the best trained accounts and you will only get the best service. The delivery
                         and updates are almost constantly updated and lightning fast. 
                     </p>
-                <img src={ThreeYearLogo} alt="Three Years in the Market Logo" />
-                <img src={ShieldLogo} alt="Shielded transactions" width="200px" height="150px"/>
-                <img src={LightningPackageLogo} alt="Lightning Fast Packages" width="200px" height="150px"/>
+                <center>
+                    <img src={ThreeYearLogo} alt="Three Years in the Market Logo" />
+                    <img src={ShieldLogo} alt="Shielded transactions" width="200px" height="150px"/>
+                    <img src={LightningPackageLogo} alt="Lightning Fast Packages" width="200px" height="150px"/>       
+                </center>
                 </Col>
             </Row>
             <Row>

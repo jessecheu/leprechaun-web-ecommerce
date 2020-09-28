@@ -13,7 +13,6 @@ import { attributes, react as Content } from '../../content/pricingandrates.md';
 function BuyOSRS() {
 
     const {osrsrate} = attributes;
-    console.log(osrsrate)
 
     return (
         <>

@@ -41,4 +41,23 @@ collections:
       fields:
         - { label: "Old School Runescape Rate (07)", name: "osrsrate", widget: "number"}
         - { label: "Runescape 3 Rate (RS3)", name: "rs3rate", widget: "number"}
+        - { label: "OSRS to RS3 SWAP RATE (OSRS -> RS3)", name: "osrstors3swap", widget: "number"}
+        - { label: "RS3 to OSRS SWAP RATE (RS3 -> OSRS)", name: "rs3toosrsswap", widget: "number"}
         - { label: "Giftcard Discount Percentage", name: "giftcarddiscount", widget: "number"}
+  - name: "videogamegiftcards"
+    label: "Video Game Giftcards"
+    files:
+    - label: "Video Game Giftcards"
+      name: "videogamegiftcards"
+      file: "content/videogamegiftcards.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Denominations", name: "denominations", widget: "string" }
+        - { label: "Giftcard Image", name: "image", widget: "image", default: "/uploads/test.jpg" }
+        - label: 'Video Game Giftcards'
+          name: "videogamegiftcards"
+          widget: list
+          fields:
+            - { label: "Name", name: "name", widget: "string"}
+            - { label: "Denominations", name: "denominations", widget: "string" }
+            - { label: "Giftcard Image", name: "image", widget: "image", default: "/uploads/test.jpg" }

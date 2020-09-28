@@ -6,9 +6,7 @@ import GeneralInformation from '../../components/layouts/GeneralInformation';
 import HowToBegin from '../../components/layouts/HowToBegin.js';
 import RWTInformation from '../../components/layouts/RWTInformation';
 
-import { apiURL } from '../../utils/apiURL'
-
-import axios from 'axios';
+import { attributes, react as Content } from '../../content/pricingandrates.md';
 
 const initialState = {
     rate: "",
@@ -86,15 +84,11 @@ class swaposrsrs3 extends React.Component {
 
 
 
-    async componentDidMount(){
+    async componentDidMount(){      
+        const {osrstors3swap} = attributes;
 
-        const rateRes = await axios({
-            method: 'GET',
-            url: `${apiURL}/rsgp-price`
-        })
-        
         this.setState({
-            rate: rateRes.data.osrsrs3swap,          
+            rate: osrstors3swap,          
         })
     }
 

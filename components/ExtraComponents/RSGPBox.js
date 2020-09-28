@@ -36,7 +36,7 @@ class RSGPBox extends React.Component {
     onInputChange = (event) => {
         event.preventDefault()
         this.setState({
-            [event.target.name]: event.target.value
+            [event.target.name]: (event.target.value)
         })
     }
     
@@ -144,7 +144,7 @@ class RSGPBox extends React.Component {
                                                 <Form.Control 
                                                     type="number" 
                                                     placeholder="RSGP" 
-                                                    value={util.formatNumber(rsgpAmount)} 
+                                                    value={rsgpAmount} 
                                                     onChange={(e) => {this.onChangeAmounts(e, 'A');
                                                 }}/>
                                                 <InputGroup.Prepend>
@@ -164,7 +164,7 @@ class RSGPBox extends React.Component {
                                                 <Form.Control 
                                                     type="number" 
                                                     placeholder="USD" 
-                                                    value={util.formatNumber(usdAmount)} 
+                                                    value={usdAmount} 
                                                     onChange={(e) => {this.onChangeAmounts(e, 'B');
                                                 }}/>
                                             </InputGroup>
