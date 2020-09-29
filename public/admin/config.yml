@@ -96,4 +96,4 @@ collections:
             - { label: "Message", name: "message", widget: "markdown" }
             - { label: "Category", name: "category", widget: "select", options: ["TrustPilot", "Sythe", "OSBot", "EpicNPC"]}
             - { label: "Link", name: "link", widget: "string" }
-            - { label: "Publish Date", name: "publishdate", widget: "date", default: ''}
+            - { label: "Publish Date", name: "publishdate", widget: "date", default: '', date_format: "DD.MM.YYYY", format: "LLL", picker_utc: false}
