@@ -34,15 +34,11 @@ function MyApp({ Component, pageProps }) {
           })();` 
         }}/>
         {/* End Tawk.to Script  */}
-
         {/* Start TrustPilot Script */}
-        <script dangerouslySetInnerHTML={{ __html: `(function(w,d,s,r,n){w.TrustpilotObject=n;w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)};
-              a=d.createElement(s);a.async=1;a.src=r;a.type='text/java'+s;f=d.getElementsByTagName(s)[0];
-              f.parentNode.insertBefore(a,f)})(window,document,'script', 'https://invitejs.trustpilot.com/tp.min.js', 'tp');
-              tp('register', 'VAFZvPe3If0Al5bp');` 
-        }}/>
+          <script type="text/javascript" 
+            src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async>
+          </script>
         {/* End TrustPilot Script */}
-        
       </Head>
       <div className="page-container" style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
         <div className="content-wrap" style={{flex: '1'}}>
