@@ -5,7 +5,6 @@ reviews:
     link: 'https://www.trustpilot.com/reviews/5eee74e27dd75306b8c94f1c'
     message: 'purchased old school runescape gold very quickly, easy to deal with'
     name: burman
-    publishdate: 2020-06-20T07:00:00.000Z
   - category: TrustPilot
     id: 2
     link: 'https://www.trustpilot.com/reviews/5eeef2197dd753032471d329'
@@ -50,13 +49,11 @@ reviews:
     link: 'https://www.sythe.org/posts/30491576/'
     message: Vouch sold me 200m smoothly.
     name: Mootrucks
-    publishdate: 2018-05-06T07:00:00.000Z
   - category: Sythe
     id: '0.02'
     link: 'https://www.sythe.org/posts/30492387/'
     message: 'Sold me 200m 07. Smooth trade, tyvm! :)'
     name: King
-    publishdate: 2018-05-06T07:00:00.000Z
   - category: Sythe
     id: '0.03'
     link: 'https://www.sythe.org/posts/30492611/'
@@ -64,6 +61,5 @@ reviews:
       Huge vouch for this man, bought 6b+ 07 off him over the course of a few
       months. Always friendly and easy to deal with, much appreciated!
     name: Searchy
-    publishdate: 2018-05-06T07:00:00.000Z
 ---
 

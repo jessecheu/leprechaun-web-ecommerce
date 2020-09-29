@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TimeStamp from 'react-timestamp'
+
 const ReviewCard = ({id, reviewName, message, category, publishdate, fromLink}) => {
 
     return(
