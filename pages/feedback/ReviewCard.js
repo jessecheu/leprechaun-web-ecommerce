@@ -11,7 +11,7 @@ const ReviewCard = ({id, reviewName, message, category, publishdate, fromLink}) 
                 {publishdate}
             </td>
             <td>{message}</td>
-            <td>{category}<a href={fromLink} target="_blank"><i class="fas fa-external-link-alt fa-xs" ></i></a></td>
+            <td><a href={fromLink} target="_blank">{category}</a></td>
          </tr>   
     ) 
 }

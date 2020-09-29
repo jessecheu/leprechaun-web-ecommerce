@@ -81,7 +81,11 @@ class Feedback extends React.Component {
                                         
                                         {sortedReviews &&
                                             sortedReviews.map((review) => {
-                                                if(review.category.toLowerCase() === ("misc")){
+                                                if(review.category.toLowerCase() === ("misc") || 
+                                                    review.category.toLowerCase() === ("sythe") ||
+                                                    review.category.toLowerCase() === ("osbot") ||
+                                                    review.category.toLowerCase() === ("epicnpc")
+                                                ){
                                                     return(
                                                         <ReviewCard 
                                                             id={review.id} 
