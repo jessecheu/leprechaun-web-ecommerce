@@ -81,19 +81,19 @@ collections:
             - { label: "Description", name: "description", widget: "markdown" }
             - { label: "Publish Time", name: "publishdate", widget: "datetime", default: "", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL", picker_utc: false }
   - name: "reviews"
-      label: "Feedback And Reviews"
-      files:
-      - label: "Feedback And Reviews"
-        name: "reviews"
-        file: "content/reviews.md"
-        fields:
-          - label: 'Feedback And Reviews'
-            name: "feedbacks"
-            widget: list
-            fields:
-              - { label: "Identifier", name: "id", widget: "number"}
-              - { label: "Name", name: "name", widget: "string"}
-              - { label: "Message", name: "message", widget: "markdown" }
-              - { label: "Category", name: "category", widget: "select", options: ["TrustPilot", "Misc"]}
-              - { label: "Link", name: "link", widget: "string" }
-              - { label: "Publish Date", name: "publishdate", widget: "datetime", default: "", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL", picker_utc: false }
+    label: "Feedback And Reviews"
+    files:
+    - label: "Feedback And Reviews"
+      name: "reviews"
+      file: "content/reviews.md"
+      fields:
+        - label: 'Feedback And Reviews'
+          name: "feedbacks"
+          widget: list
+          fields:
+            - { label: "Identifier", name: "id", widget: "number"}
+            - { label: "Name", name: "name", widget: "string"}
+            - { label: "Message", name: "message", widget: "markdown" }
+            - { label: "Category", name: "category", widget: "select", options: ["TrustPilot", "Misc"]}
+            - { label: "Link", name: "link", widget: "string" }
+            - { label: "Publish Date", name: "publishdate", widget: "datetime", default: "", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL", picker_utc: false }
