@@ -88,7 +88,7 @@ collections:
       file: "content/reviews.md"
       fields:
         - label: 'Feedback And Reviews'
-          name: "feedbacks"
+          name: "reviews"
           widget: list
           fields:
             - { label: "Identifier", name: "id", widget: "number"}

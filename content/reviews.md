@@ -1,5 +1,5 @@
 ---
-feedbacks:
+reviews:
   - category: TrustPilot
     id: 1
     link: 'https://www.trustpilot.com/reviews/5eee74e27dd75306b8c94f1c'
