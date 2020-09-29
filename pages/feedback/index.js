@@ -15,7 +15,8 @@ class Feedback extends React.Component {
     }
 
     render(){
-        const sortedReviews = reviews.sort((a,b ) => b.publishdate.localeCompare(a.publishdate))
+        // const sortedReviews = reviews.sort((a,b ) => b.publishdate.localeCompare(a.publishdate))
+        const sortedReviews = reviews.sort((a, b) => b.id - a.id)
     return (
         <div>
         <Helmet>

@@ -1,5 +1,10 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+
 import React, { useState } from 'react';
 import Header from '../components/layouts/Header'
 import NavBar from '../components/layouts/NavBar'

@@ -6,12 +6,12 @@ const ReviewCard = ({id, reviewName, message, category, publishdate, fromLink}) 
         <tr>   
             <td>{id}</td>
             <td>
-                {reviewName} 
+                <b>{reviewName}</b>
                 <br/>
                 {publishdate}
             </td>
             <td>{message}</td>
-            <td><a href={fromLink} target="_blank">{category}</a></td>
+            <td>{category}<a href={fromLink} target="_blank"><i class="fas fa-external-link-alt fa-xs" /></a></td>
          </tr>   
     ) 
 }

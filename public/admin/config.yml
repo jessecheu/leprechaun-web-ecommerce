@@ -96,4 +96,4 @@ collections:
             - { label: "Message", name: "message", widget: "markdown" }
             - { label: "Category", name: "category", widget: "select", options: ["TrustPilot", "Misc"]}
             - { label: "Link", name: "link", widget: "string" }
-            - { label: "Publish Date", name: "publishdate", widget: "datetime", default: "", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL", picker_utc: false }
+            - { label: "Publish Date", name: "publishdate", widget: "date", default: "", date_format: "DD Do YY"}
