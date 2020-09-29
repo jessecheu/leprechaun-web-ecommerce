@@ -91,7 +91,7 @@ collections:
           name: "reviews"
           widget: list
           fields:
-            - { label: "Identifier", name: "id", widget: "number", value_type: "float", step: 2}
+            - { label: "Identifier", name: "id", widget: "string"}
             - { label: "Name", name: "name", widget: "string"}
             - { label: "Message", name: "message", widget: "markdown" }
             - { label: "Category", name: "category", widget: "select", options: ["TrustPilot", "Misc"]}
