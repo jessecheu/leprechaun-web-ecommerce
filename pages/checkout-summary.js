@@ -25,11 +25,6 @@ class Checkout extends React.Component{
 
     static contextType = UserContext
 
-
-    feesChange = (e) => {
-
-    }
-
     onChangePaymentMethod = e => {
         const {amountOfProduct, rateOfProduct, price, fees} = this.state
         let localPrice = amountOfProduct * rateOfProduct;
@@ -132,7 +127,7 @@ class Checkout extends React.Component{
                                         <Card.Body>
                                             <center>
                                                 <Card.Title>Bitcoin (BTC)</Card.Title>
-                                                <Card.Subtitle className="mb-2 text-muted"><i class="fab fa-bitcoin fa-2x"></i></Card.Subtitle>
+                                                <Card.Subtitle className="mb-2 text-muted"><i class="fab fa-bitcoin fa-2x fa-fw" width="40px"></i></Card.Subtitle>
                                             </center>
                                         </Card.Body>
                                     </Card>
@@ -152,7 +147,7 @@ class Checkout extends React.Component{
                                         <Card.Body>
                                             <center>
                                                 <Card.Title>Cashapp</Card.Title>
-                                                <Card.Subtitle className="mb-2 text-muted"><i class="fas fa-dollar-sign fa-2x"></i></Card.Subtitle>
+                                                <Card.Subtitle className="mb-2 text-muted"><i class="fas fa-dollar-sign fa-2x fa-fw" width="40px"></i></Card.Subtitle>
                                             </center>
                                         </Card.Body>
                                     </Card>
@@ -171,7 +166,7 @@ class Checkout extends React.Component{
                                         <Card.Body>
                                             <center>
                                                 <Card.Title>Venmo</Card.Title>
-                                                <Card.Subtitle className="mb-2 text-muted"><i class="fab fa-vimeo-v fa-2x"></i></Card.Subtitle>
+                                                <Card.Subtitle className="mb-2 text-muted"><i class="fab fa-vimeo-v fa-2x fa-fw" width="40px"></i></Card.Subtitle>
                                             </center>
                                         </Card.Body>
                                     </Card>
