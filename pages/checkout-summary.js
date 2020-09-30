@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-
 import { UserContext } from '../utils/UserContext'
-
 import {Container, Row, Col, Button,ButtonGroup, Card} from 'react-bootstrap'
 import util from "../components/ExtraComponents/util.js"
 
 import Router from 'next/router'
+
+import ZelleIcon from '../assets/icons/zelle-icon.png';
 
 
 class Checkout extends React.Component{
@@ -14,6 +14,7 @@ class Checkout extends React.Component{
         amountOfProduct: '',
         rateOfProduct: '',
         fees: '',
+        estimateFee: '',
         price: "",
         paymentMethod: "",
         registeredUserName: "",
@@ -30,22 +31,24 @@ class Checkout extends React.Component{
     }
 
     onChangePaymentMethod = e => {
-        const {amountOfProduct, rateOfProduct, fees} = this.state
+        const {amountOfProduct, rateOfProduct, price, fees} = this.state
+        let localPrice = amountOfProduct * rateOfProduct;
         let localFees = 0;
         if(e.target.value === 'Bitcoin (BTC)'){
             localFees = 0;
-            this.setState({fees: 0})
         }else if(e.target.value === 'Cashapp Balance'){
-            localFees = 10;
-            this.setState({fees: 10})
+            const cashappfee = 1.15; 
+            localFees = ((localPrice)*cashappfee)-localPrice; 
         }else if(e.target.value === 'Venmo Balance'){
-            localFees = 15;
-            this.setState({fees: 15})
+            const venmofee = 1.20;
+            localFees = ((localPrice)*venmofee)-localPrice; 
         }else if(e.target.value === 'Zelle'){
-            localFees = 5;
-            this.setState({fees: 5})
+            const zellefee = 1.55;
+            localFees = ((localPrice)*zellefee)-localPrice; 
         }
-        this.setState({paymentMethod : e.target.value, price: util.formatNumber(parseFloat((amountOfProduct*rateOfProduct)+localFees)) });
+        localFees = parseFloat(localFees.toFixed(3))
+        const afterprice = util.formatNumber(parseFloat((localPrice)+localFees))
+        this.setState({paymentMethod : e.target.value, price: afterprice, estimatedFee: localFees});
     }
 
 
@@ -75,7 +78,7 @@ class Checkout extends React.Component{
 
     render(){
         const {product, amountOfProduct, 
-        rateOfProduct, fees, price, paymentMethod, 
+        rateOfProduct, fees, estimatedFee, price, paymentMethod, 
         registeredUserName, email, characterName, couponCode} = this.state
 
     
@@ -103,7 +106,7 @@ class Checkout extends React.Component{
                                 <li style={{borderBottom: '1px solid grey', borderTop: '1px solid grey'}}>Product:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{product}</a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Amount:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{amountOfProduct}</a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Rate:      <a style={{textAlign: 'left', fontWeight: 'bold'}}>{rateOfProduct}/m</a></li>
-                                <li style={{borderBottom: '1px solid grey'}}>Fees:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>${fees}</a></li>
+                                <li style={{borderBottom: '1px solid grey'}}>Fees:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>${estimatedFee}</a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Price:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>${price}</a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Payment Method:      <a style={{textAlign: 'left', fontWeight: 'bold'}}>{paymentMethod} </a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Checkout as Guest or <a href="/login" style={{color: 'Blue'}}>Log in</a>     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{registeredUserName} </a></li>
@@ -127,8 +130,10 @@ class Checkout extends React.Component{
                                 <label>
                                     <Card style={{ width: '10rem' }}>
                                         <Card.Body>
-                                            <Card.Title>Bitcoin</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                            <center>
+                                                <Card.Title>Bitcoin (BTC)</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted"><i class="fab fa-bitcoin fa-2x"></i></Card.Subtitle>
+                                            </center>
                                         </Card.Body>
                                     </Card>
                                     <input 
@@ -145,8 +150,10 @@ class Checkout extends React.Component{
                                 <label>
                                     <Card style={{ width: '10rem' }}>
                                         <Card.Body>
-                                            <Card.Title>Cashapp</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                            <center>
+                                                <Card.Title>Cashapp</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted"><i class="fas fa-dollar-sign fa-2x"></i></Card.Subtitle>
+                                            </center>
                                         </Card.Body>
                                     </Card>
                                     <input
@@ -162,8 +169,10 @@ class Checkout extends React.Component{
                                 <label>
                                     <Card style={{ width: '10rem' }}>
                                         <Card.Body>
-                                            <Card.Title>Venmo</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                            <center>
+                                                <Card.Title>Venmo</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted"><i class="fab fa-vimeo-v fa-2x"></i></Card.Subtitle>
+                                            </center>
                                         </Card.Body>
                                     </Card>
                                     <input
@@ -179,8 +188,10 @@ class Checkout extends React.Component{
                                 <label>
                                     <Card style={{ width: '10rem' }}>
                                         <Card.Body>
-                                            <Card.Title>Zelle</Card.Title>
-                                            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                                            <center>
+                                                <Card.Title>Zelle</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted"><img src={ZelleIcon} width="40px"/></Card.Subtitle>
+                                            </center>
                                         </Card.Body>
                                     </Card>
                                     <input

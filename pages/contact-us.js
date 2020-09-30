@@ -11,7 +11,7 @@ function Contact() {
             <meta name="description" content="Contact RPGStock Adminsitrators with Email" />
             {/* <!-- Begin Mailchimp Signup Form --> */}
         </Helmet>
-        <h1> Contact US </h1>
+        <center><h1> Contact US </h1></center>
         < hr />
         <Container>
             <Row>
@@ -24,7 +24,7 @@ function Contact() {
             < br />
             <Row>
                 <Col sm={6}>
-                    <iframe src="https://discord.com/widget?id=725546040492556389&theme=dark" width="350" height="500" allowtransparency="true" frameBorder="0"></iframe>
+                    <iframe src="https://discord.com/widget?id=725546040492556389&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                 </Col>
                 <Col md={6}>
                     <h1>Discord</h1>
@@ -41,14 +41,16 @@ function Contact() {
                     </p>
                 </Col>
             </Row>
-            <Row>
+            <Row className="justify-content-center">
                 <Col>
-                    <h1>Skype</h1>
-                    <p>
-                        live:pageth (case sensitive)
-                        < br />
-                        Please beware of Skype impersonators. Use Live Chat to confirm it is indeed us.
-                    </p>
+                    <center>
+                        <h1>Skype</h1>
+                        <p>
+                            live:pageth (case sensitive)
+                            < br />
+                            Please beware of Skype impersonators. Use Live Chat to confirm it is indeed us.
+                        </p>
+                    </center>
                 </Col>
             </Row>
         </Container>
