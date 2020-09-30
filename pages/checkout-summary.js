@@ -5,7 +5,14 @@ import util from "../components/ExtraComponents/util.js"
 
 import Router from 'next/router'
 
+import BitcoinIcon from '../assets/icons/bitcoin-icon.png'
+import EthereumIcon from '../assets/icons/ethereum-icon.png'
+import LitecoinIcon from '../assets/icons/litecoin-icon.png'
+import XRPIcon from '../assets/icons/xrp-icon.png'
 import ZelleIcon from '../assets/icons/zelle-icon.png';
+import CashappIcon from '../assets/icons/cashapp-icon.png';
+import VenmoIcon from '../assets/icons/venmo-icon.png'
+
 
 
 class Checkout extends React.Component{
@@ -29,16 +36,19 @@ class Checkout extends React.Component{
         const {amountOfProduct, rateOfProduct, price, fees} = this.state
         let localPrice = amountOfProduct * rateOfProduct;
         let localFees = 0;
-        if(e.target.value === 'Bitcoin (BTC)'){
+        if(e.target.value === 'Bitcoin (BTC)' || 
+            e.target.value === 'Ethereum (ETH)' || 
+            e.target.value === 'Litecoin (LTC)' ||
+            e.target.value === 'XRP (XRP)' ){
             localFees = 0;
         }else if(e.target.value === 'Cashapp Balance'){
-            const cashappfee = 1.15; 
+            const cashappfee = 1.20; 
             localFees = ((localPrice)*cashappfee)-localPrice; 
         }else if(e.target.value === 'Venmo Balance'){
-            const venmofee = 1.20;
+            const venmofee = 1.21;
             localFees = ((localPrice)*venmofee)-localPrice; 
         }else if(e.target.value === 'Zelle'){
-            const zellefee = 1.55;
+            const zellefee = 1.24;
             localFees = ((localPrice)*zellefee)-localPrice; 
         }
         localFees = parseFloat(localFees.toFixed(3))
@@ -104,7 +114,7 @@ class Checkout extends React.Component{
                                 <li style={{borderBottom: '1px solid grey'}}>Fees:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>${estimatedFee}</a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Price:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>${price}</a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Payment Method:      <a style={{textAlign: 'left', fontWeight: 'bold'}}>{paymentMethod} </a></li>
-                                <li style={{borderBottom: '1px solid grey'}}>Checkout as Guest or <a href="/login" style={{color: 'Blue'}}>Log in</a>     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{registeredUserName} </a></li>
+                                {/* <li style={{borderBottom: '1px solid grey'}}>Checkout as Guest or <a href="/login" style={{color: 'Blue'}}>Log in</a>     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{registeredUserName} </a></li> */}
                                 <li style={{borderBottom: '1px solid grey'}}>Email:    <a style={{textAlign: 'left', fontWeight: 'bold'}}>{email} </a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Character Name:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{characterName} </a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Coupon Code?:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{couponCode}</a></li>
@@ -123,11 +133,11 @@ class Checkout extends React.Component{
                         <Row>
                             <Col md={4}>
                                 <label>
-                                    <Card style={{ width: '10rem' }}>
+                                    <Card style={{ width: '10rem', height: '8rem'  }}>
                                         <Card.Body>
                                             <center>
                                                 <Card.Title>Bitcoin (BTC)</Card.Title>
-                                                <Card.Subtitle className="mb-2 text-muted"><i class="fab fa-bitcoin fa-2x fa-fw" width="40px"></i></Card.Subtitle>
+                                                <Card.Subtitle className="mb-2 text-muted"><img src={BitcoinIcon} width="40px"/></Card.Subtitle>
                                             </center>
                                         </Card.Body>
                                     </Card>
@@ -143,11 +153,71 @@ class Checkout extends React.Component{
                             </Col>
                             <Col md={4}>
                                 <label>
-                                    <Card style={{ width: '10rem' }}>
+                                    <Card style={{ width: '10rem', height: '8rem' }}>
+                                        <Card.Body>
+                                            <center>
+                                                <Card.Title>Ethereum (ETH)</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted"><img src={EthereumIcon} width="40px"/></Card.Subtitle>
+                                            </center>
+                                        </Card.Body>
+                                    </Card>
+                                    <input 
+                                        name="payment-group"
+                                        type="radio" 
+                                        value="Ethereum (ETH)" 
+                                        checked={paymentMethod === "Ethereum (ETH)"}
+                                        onChange={this.onChangePaymentMethod} 
+                                        defaultChecked
+                                    />  
+                                </label>           
+                            </Col>
+                            <Col md={4}>
+                                <label>
+                                    <Card style={{ width: '10rem', height: '8rem' }}>
+                                        <Card.Body>
+                                            <center>
+                                                <Card.Title>Litecoin (LTC)</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted"><img src={LitecoinIcon} width="40px"/></Card.Subtitle>
+                                            </center>
+                                        </Card.Body>
+                                    </Card>
+                                    <input 
+                                        name="payment-group"
+                                        type="radio" 
+                                        value="Litecoin (LTC)" 
+                                        checked={paymentMethod === "Litecoin (LTC)"}
+                                        onChange={this.onChangePaymentMethod} 
+                                        defaultChecked
+                                    />  
+                                </label>           
+                            </Col>
+                            <Col md={4}>
+                                <label>
+                                    <Card style={{ width: '10rem', height: '8rem' }}>
+                                        <Card.Body>
+                                            <center>
+                                                <Card.Title>XRP (XRP)</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted"><img src={XRPIcon} width="40px"/></Card.Subtitle>
+                                            </center>
+                                        </Card.Body>
+                                    </Card>
+                                    <input 
+                                        name="payment-group"
+                                        type="radio" 
+                                        value="XRP (XRP)" 
+                                        checked={paymentMethod === "XRP (XRP)"}
+                                        onChange={this.onChangePaymentMethod} 
+                                        defaultChecked
+                                    />  
+                                </label>           
+                            </Col>
+                            <Col md={4}>
+                                <label>
+                                    <Card style={{ width: '10rem', height: '8rem'  }}>
                                         <Card.Body>
                                             <center>
                                                 <Card.Title>Cashapp</Card.Title>
-                                                <Card.Subtitle className="mb-2 text-muted"><i class="fas fa-dollar-sign fa-2x fa-fw" width="40px"></i></Card.Subtitle>
+                                                <Card.Subtitle className="mb-2 text-muted"><img src={CashappIcon} width="60px"/></Card.Subtitle>
                                             </center>
                                         </Card.Body>
                                     </Card>
@@ -162,11 +232,11 @@ class Checkout extends React.Component{
                             </Col>
                             <Col md={4}>
                                 <label>
-                                    <Card style={{ width: '10rem' }}>
+                                    <Card style={{ width: '10rem', height: '8rem'  }}>
                                         <Card.Body>
                                             <center>
                                                 <Card.Title>Venmo</Card.Title>
-                                                <Card.Subtitle className="mb-2 text-muted"><i class="fab fa-vimeo-v fa-2x fa-fw" width="40px"></i></Card.Subtitle>
+                                                <Card.Subtitle className="mb-2 text-muted"><img src={VenmoIcon} width="40px"/></Card.Subtitle>
                                             </center>
                                         </Card.Body>
                                     </Card>
@@ -181,7 +251,7 @@ class Checkout extends React.Component{
                             </Col>
                             <Col md={4}>
                                 <label>
-                                    <Card style={{ width: '10rem' }}>
+                                    <Card style={{ width: '10rem', height: '8rem'  }}>
                                         <Card.Body>
                                             <center>
                                                 <Card.Title>Zelle</Card.Title>
