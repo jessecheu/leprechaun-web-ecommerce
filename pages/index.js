@@ -8,10 +8,17 @@ const QBDDonorRank = require('../assets/userreviews/qbd-donorrank.png');
 const AssassinName = require('../assets/userreviews/assassin-name.png');
 const AssassinDonorRank = require('../assets/userreviews/assassin-donorrank.png');
 
+import RSGPBox from '../components/ExtraComponents/RSGPBox'
+import OSRSLogo from '../assets/osrs-logo.png'
+import RS3Logo from '../assets/rs3-logo.png'
+
+
 import { Container, Row, Col, Card, ListGroup} from 'react-bootstrap';
+import { attributes, react as Content } from '../content/pricingandrates.md';
 
 function Home() {
 
+const {osrsrate, rs3rate} = attributes;
 
   return (
     <div className="App">
@@ -19,7 +26,7 @@ function Home() {
         {/* <!-- Quick-start- Container --> */}
         <Container className="quickStartContainer">
             <Row className="justify-content-center">
-                <Col>
+                {/* <Col>
                     <Card style={{  }}>
                     <Card.Header>Runescape</Card.Header>
                         <ListGroup variant="flush">
@@ -36,6 +43,14 @@ function Home() {
                             <ListGroup.Item style={{backgroundColor: 'purple', fontSize: '2rem', fontWeight: 'bold'}}><a href="/miscellaneous/video-game-giftcards">Purchase Discounted Video Game Giftcards</a></ListGroup.Item>
                         </ListGroup>
                     </Card>
+                </Col> */}
+                <Col>
+                    <center><img src={OSRSLogo} width="200px"/></center>
+                    <RSGPBox title={"Old School Runescape Gold"} rate={osrsrate}/>
+                </Col>
+                <Col>
+                    <center><img src={RS3Logo} width="130px"/></center>
+                    <RSGPBox title="Runescape 3 Gold" rate={rs3rate}/>
                 </Col>
             </Row>
         </Container>

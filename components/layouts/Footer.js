@@ -9,25 +9,25 @@ import { Container, Row, Col} from 'react-bootstrap';
 
 const Footer = () => {
     return(
-        <div className="main-footer" style={{padding: '4px', paddingTop: '0px', backgroundColor: 'red'}}>
+        <div className="main-footer" style={{padding: '4px', paddingTop: '0px', backgroundColor: 'white'}}>
             <Container>
                 <Row>
                     {/* Column1 */}
                     <Col md={3}>
                         <h4>RPGStock</h4>
                         <ul className="list-unstyled">
-                            <li><a href="/aboutus">About us</a></li>
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="/feedback">Feedback</a></li>
+                            <li><a href="/">About us</a></li>
+                            <li><a href="/">Blog</a></li>
+                            <li><a href="/">Feedback</a></li> 
                         </ul>
                     </Col>
                     {/* Column2 */}
                     <Col md={3}>
                         <h4>Support</h4>
                         <ul className="list-unstyled">
-                            <li><a href="/helpcenter">Help Center</a></li>
+                            <li><a href="/">Help Center</a></li>
                             <li><a href="/paymentmethods">Payment Methods</a></li>
-                            <li><a href="/contact-us">Contact Us</a></li>
+                            <li><a href="/">Contact Us</a></li>
                         </ul>
                     </Col>
                     {/* Column3 */}

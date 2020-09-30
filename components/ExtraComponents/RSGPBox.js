@@ -68,8 +68,8 @@ class RSGPBox extends React.Component {
 
         if(!rsgpAmount || !usdAmount){
             amountError = "*Please input how much you want to purchase*"
-        }else if(usdAmount >= 250){
-            amountError = "*You are attempting to purchase $250 or more, please contact an live chat agent to proceed.*"
+        }else if(usdAmount >= 1500){
+            amountError = "*You are attempting to purchase $1500 or more, please contact an live chat agent to proceed.*"
         }
         if(
             !characterName || 

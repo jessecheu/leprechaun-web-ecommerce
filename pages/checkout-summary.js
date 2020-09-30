@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { UserContext } from '../utils/UserContext'
 import {Container, Row, Col, Button,ButtonGroup, Card} from 'react-bootstrap'
 import util from "../components/ExtraComponents/util.js"
@@ -9,9 +9,12 @@ import BitcoinIcon from '../assets/icons/bitcoin-icon.png'
 import EthereumIcon from '../assets/icons/ethereum-icon.png'
 import LitecoinIcon from '../assets/icons/litecoin-icon.png'
 import XRPIcon from '../assets/icons/xrp-icon.png'
-import ZelleIcon from '../assets/icons/zelle-icon.png';
+import PayPalIcon from '../assets/icons/paypal-icon.png'
 import CashappIcon from '../assets/icons/cashapp-icon.png';
 import VenmoIcon from '../assets/icons/venmo-icon.png'
+import ZelleIcon from '../assets/icons/zelle-icon.png';
+
+import PaymentMethodModal from '../components/ExtraComponents/PaymentMethodModal'
 
 
 
@@ -23,11 +26,13 @@ class Checkout extends React.Component{
         fees: '',
         estimateFee: '',
         price: "",
+        updatedRate: '',
         paymentMethod: "",
         registeredUserName: "",
         email: "",
         characterName: "",
         couponCode: "N/A",
+        modalShow: false
     }
 
     static contextType = UserContext
@@ -42,29 +47,31 @@ class Checkout extends React.Component{
             e.target.value === 'XRP (XRP)' ){
             localFees = 0;
         }else if(e.target.value === 'Cashapp Balance'){
-            const cashappfee = 1.20; 
+            const cashappfee = 1.14; 
             localFees = ((localPrice)*cashappfee)-localPrice; 
+        }else if(e.target.value === 'PayPal'){
+            const paypalfee = 1.18; 
+            localFees = ((localPrice)*paypalfee)-localPrice; 
         }else if(e.target.value === 'Venmo Balance'){
-            const venmofee = 1.21;
+            const venmofee = 1.22;
             localFees = ((localPrice)*venmofee)-localPrice; 
         }else if(e.target.value === 'Zelle'){
-            const zellefee = 1.24;
+            const zellefee = 1.25;
             localFees = ((localPrice)*zellefee)-localPrice; 
         }
         localFees = parseFloat(localFees.toFixed(3))
         const afterprice = util.formatNumber(parseFloat((localPrice)+localFees))
-        this.setState({paymentMethod : e.target.value, price: afterprice, estimatedFee: localFees});
+        const updatedRate = parseFloat(afterprice/amountOfProduct).toFixed(3);
+        this.setState({paymentMethod : e.target.value, price: afterprice, estimatedFee: localFees, updatedRate: updatedRate });
     }
 
 
     componentDidMount(){
-        console.log("Checkout.componentDidMount props",this.props)
         const {user} = this.context
-        console.log("Checkout.componentDidMount user", user)
         console.log(user.title)
         if(user.title === undefined){
             Router.push({
-                pathname: '/404'
+                pathname: '/'
             })
         }
         if(user){
@@ -83,9 +90,8 @@ class Checkout extends React.Component{
 
     render(){
         const {product, amountOfProduct, 
-        rateOfProduct, fees, estimatedFee, price, paymentMethod, 
-        registeredUserName, email, characterName, couponCode} = this.state
-
+        rateOfProduct, fees, estimatedFee, price, updatedRate, paymentMethod, 
+        registeredUserName, email, characterName, couponCode, modalShow} = this.state
     
         return(
             <>
@@ -95,10 +101,10 @@ class Checkout extends React.Component{
                 <h2>Guarranted SAFE Checkout</h2>
             </Row>
             <Row className="justify-content-center">
-                <img alt={"Guarranted Safe Checkout Logo"} />
+                {/* <img alt={"Guarranted Safe Checkout Logo"} /> */}
             </Row>
             <Row className="justify-content-center">
-                <h4>Checkout - Summary - </h4>
+                {/* <h4>Checkout - Summary - </h4> */}
             </Row>
             </Container>
             <Container style={{backgroundColor: "orange", paddingTop: '20px', border: '1px solid black'}}>
@@ -113,12 +119,19 @@ class Checkout extends React.Component{
                                 <li style={{borderBottom: '1px solid grey'}}>Rate:      <a style={{textAlign: 'left', fontWeight: 'bold'}}>{rateOfProduct}/m</a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Fees:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>${estimatedFee}</a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Price:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>${price}</a></li>
+                                <li style={{borderBottom: '1px solid grey'}}>Updated Rate:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{updatedRate}/m</a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Payment Method:      <a style={{textAlign: 'left', fontWeight: 'bold'}}>{paymentMethod} </a></li>
                                 {/* <li style={{borderBottom: '1px solid grey'}}>Checkout as Guest or <a href="/login" style={{color: 'Blue'}}>Log in</a>     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{registeredUserName} </a></li> */}
                                 <li style={{borderBottom: '1px solid grey'}}>Email:    <a style={{textAlign: 'left', fontWeight: 'bold'}}>{email} </a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Character Name:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{characterName} </a></li>
                                 <li style={{borderBottom: '1px solid grey'}}>Coupon Code?:     <a style={{textAlign: 'left', fontWeight: 'bold'}}>{couponCode}</a></li>
                             </ul>
+                            <div>
+                                <p>*Recommended Payment Method: BTC or Cashapp* Visit 
+                                    <a href="http://localhost:3000/paymentmethods" target="_blank" style={{color: 'blue'}}> Payment Method Page </a> 
+                                    for more information.
+                                </p>
+                            </div>
                         </Col>                   
                     </Col>
                     <Col md={6}>
@@ -216,6 +229,25 @@ class Checkout extends React.Component{
                                     <Card style={{ width: '10rem', height: '8rem'  }}>
                                         <Card.Body>
                                             <center>
+                                                <Card.Title>PayPal</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted"><img src={PayPalIcon} width="60px"/></Card.Subtitle>
+                                            </center>
+                                        </Card.Body>
+                                    </Card>
+                                    <input
+                                        name="payment-group" 
+                                        type="radio" 
+                                        value="PayPal" 
+                                        checked={paymentMethod === "PayPal"}
+                                        onChange={this.onChangePaymentMethod} 
+                                    />  
+                                </label>           
+                            </Col>
+                            <Col md={4}>
+                                <label>
+                                    <Card style={{ width: '10rem', height: '8rem'  }}>
+                                        <Card.Body>
+                                            <center>
                                                 <Card.Title>Cashapp</Card.Title>
                                                 <Card.Subtitle className="mb-2 text-muted"><img src={CashappIcon} width="60px"/></Card.Subtitle>
                                             </center>
@@ -266,7 +298,7 @@ class Checkout extends React.Component{
                                         checked={paymentMethod === "Zelle"}
                                         onChange={this.onChangePaymentMethod} 
                                     />  
-                                </label>           
+                                </label>         
                             </Col>
                         </Row>
                     </Col>
@@ -282,9 +314,23 @@ class Checkout extends React.Component{
                     
                 </Row>
                 <Row className="justify-content-center">
-                    <Button size="lg" style={{width: '450px', height: '100px', fontSize: '45px', fontWeight: 'bold'}} variant="warning">
+                    <Button size="lg" style={{width: '450px', height: '100px', fontSize: '45px', fontWeight: 'bold'}} variant="warning" onClick={() => this.setState({modalShow: true})} >
                             Checkout ( ${price} )
                     </Button>
+
+                    <PaymentMethodModal
+                        product={product}
+                        amount={amountOfProduct}
+                        rate={updatedRate}
+                        fees={estimatedFee}
+                        price={price}
+                        paymentMethod={paymentMethod}
+                        registeredUserName={registeredUserName}
+                        email={email}
+                        characterName={characterName}
+                        show={modalShow}
+                        onHide={() => this.setState({modalShow: false})}
+                    />
                 </Row>
                 <br />
             </Container>

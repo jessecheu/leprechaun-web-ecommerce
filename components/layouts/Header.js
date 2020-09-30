@@ -11,7 +11,7 @@ class Header extends Component {
           <div className="top-bar">
             <div className="buttons">
               <p className="ProfileSeperation">
-                Welcome
+                {/* Welcome */}
                 {/* <a href="/profile">View Profile</a>
                 <a href="/">
                   Logout
