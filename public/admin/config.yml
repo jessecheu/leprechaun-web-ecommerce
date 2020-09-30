@@ -39,10 +39,10 @@ collections:
       name: "pricingandrates"
       file: "content/pricingandrates.md"
       fields:
-        - { label: "Old School Runescape Rate (07)", name: "osrsrate", widget: "number", value_type: "float"}
-        - { label: "Runescape 3 Rate (RS3)", name: "rs3rate", widget: "number", value_type: "float"}
-        - { label: "OSRS to RS3 SWAP RATE (OSRS -> RS3)", name: "osrstors3swap", widget: "number", value_type: "float"}
-        - { label: "RS3 to OSRS SWAP RATE (RS3 -> OSRS)", name: "rs3toosrsswap", widget: "number", value_type: "float"}
+        - { label: "Old School Runescape Rate (07)", name: "osrsrate", widget: "number"}
+        - { label: "Runescape 3 Rate (RS3)", name: "rs3rate", widget: "number"}
+        - { label: "OSRS to RS3 SWAP RATE (OSRS -> RS3)", name: "osrstors3swap", widget: "number"}
+        - { label: "RS3 to OSRS SWAP RATE (RS3 -> OSRS)", name: "rs3toosrsswap", widget: "number"}
   - name: "videogamegiftcards"
     label: "Video Game Giftcards"
     files:
@@ -75,7 +75,7 @@ collections:
             - { label: "Title", name: "title", widget: "string"}
             - { label: "Gamemode", name: "gamemode", widget: "select", options: ["OSRS", "RS3"]}
             - { label: "Account Level", name: "accountlevel", widget: "select", options: ["Started", "Med", "Maxed"]}
-            - { label: "Price", name: "price", widget: "number", value_type: "float"}
+            - { label: "Price", name: "price", widget: "number"}
             - { label: "Categories", name: "category", widget: "select", options: ["Main", "Pure", "Zerk", "Obby Mauler", "Skiller", "Misc", "Staker" ] }
             - { label: "Thumbnail", name: "thumbnail", widget: "image" }
             - { label: "Description", name: "description", widget: "markdown" }
