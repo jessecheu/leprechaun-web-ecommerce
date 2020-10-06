@@ -14,7 +14,7 @@ export const HowToBegin = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <h1 className="title">HOW TO BEGIN?</h1>
+                            <center><h1 className="title">HOW TO BEGIN?</h1></center>
                         </div>
                         <div className="row">
                             <div className="col-md-3">

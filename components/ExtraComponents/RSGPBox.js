@@ -74,8 +74,8 @@ class RSGPBox extends React.Component {
         if(
             !characterName || 
             characterName.length < 0 || 
-            characterName.length > 12 ||
-            !validator.isAlphanumeric(characterName, 'en-US')
+            characterName.length > 12
+            // !validator.isAlphanumeric(characterName, 'en-US')
             ){
             characterNameError="*Invalid Character Name, Please input your Character Name*"
         }
