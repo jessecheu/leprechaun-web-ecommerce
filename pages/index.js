@@ -20,7 +20,9 @@ function Home() {
 
 const {osrsrate, rs3rate} = attributes;
 
+
   return (
+
     <div className="App">
 
         {/* <!-- Quick-start- Container --> */}

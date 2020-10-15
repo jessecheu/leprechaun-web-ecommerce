@@ -23,16 +23,27 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="icon" type="image/png" href="/rpgstock-icon-temp.png" />
 
-        {/* <!-- Start of rpgstock Zendesk Widget script --> */}
-        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ea493b8a-3c9c-46c2-96b4-0380c01d7ef0"> </script>
-        {/* <!-- End of rpgstock Zendesk Widget script --> */}
-
         {/* Start TrustPilot Script */}
           <script type="text/javascript" 
             src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async>
           </script>
         {/* End TrustPilot Script */}
+
+        {/* Start Tawk.to Script  */}
+        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: `var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+          (function(){
+          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+          s1.async=true;
+          s1.src='https://embed.tawk.to/5edb10009e5f6944228fffe1/default';
+          s1.charset='UTF-8';
+          s1.setAttribute('crossorigin','*');
+          s0.parentNode.insertBefore(s1,s0);
+          })();` 
+        }}/>
+        {/* End Tawk.to Script  */}
+
       </Head>
+      
       <div className="page-container" style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
         <div className="content-wrap" style={{flex: '1'}}>
           <Header />

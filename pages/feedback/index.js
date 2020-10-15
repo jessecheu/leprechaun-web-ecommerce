@@ -34,7 +34,7 @@ class Feedback extends React.Component {
                         <center>
                             <h2>Trust Pilot</h2>
                             <hr />
-                            <a href="https://www.trustpilot.com/review/rpgstock.com"><img src={TrustPilot} width='125px'/></a>
+                            <a href="https://www.trustpilot.com/review/rpgstock.com" target="_blank"><img src={TrustPilot} width='125px'/></a>
                             <br />
                             <br />
                         </center>
@@ -44,9 +44,9 @@ class Feedback extends React.Component {
                         <center>
                             <h2>Sythe</h2>
                             <hr />
-                            <a href="https://www.sythe.org/members/fyrix.741875/"><img src={SytheHeader} width='400px'/></a>
+                            <a href="https://www.sythe.org/members/fyrix.741875/" target="_blank"><img src={SytheHeader} width='400px'/></a>
                             <br />
-                            <a href="https://www.sythe.org/threads/fyrixs-vouch-thread-v1-www-rpgstock-com/">Vouch Thread</a>
+                            <a href="https://www.sythe.org/threads/fyrixs-vouch-thread-v1-www-rpgstock-com/" target="_blank">Vouch Thread</a>
                             <br />
                         </center>
                     </Col>

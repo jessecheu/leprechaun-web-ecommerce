@@ -18,7 +18,7 @@ const Footer = () => {
                         <ul className="list-unstyled">
                             <li><a href="/">About us</a></li>
                             <li><a href="/">Blog</a></li>
-                            <li><a href="/">Feedback</a></li> 
+                            <li><a href="/feedback">Feedback</a></li> 
                         </ul>
                     </Col>
                     {/* Column2 */}
