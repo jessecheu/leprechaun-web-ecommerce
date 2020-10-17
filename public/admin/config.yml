@@ -39,6 +39,7 @@ collections:
       name: "howtobegincomponent"
       file: "../../content/howtobegincomponent.md"
       fields:
+      - { label: "title", name: 'title', widget: 'string'}
       - label: "Sections"
         name: "sections"
         widget: list
