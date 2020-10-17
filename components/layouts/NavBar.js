@@ -5,11 +5,11 @@ import RPGStockLogo from '../../assets/RPGStock-logo.png';
 import {attributes} from '../../content/logocomponent.md'
 
 export const NavBar = () => {
-    const { image, alttext} = attributes;
+    const { headerimage, alttext} = attributes;
     return (
         <div>
             <ReactBootStrap.Navbar className="my-navbar" bg="light" expand="lg">
-            <ReactBootStrap.Navbar.Brand href="/"><img src={image} alt={`${alttext}`} width="80px" height="25px"/></ReactBootStrap.Navbar.Brand>
+            <ReactBootStrap.Navbar.Brand href="/"><img src={headerimage} alt={`${alttext}`} width="80px" height="25px"/></ReactBootStrap.Navbar.Brand>
             <ReactBootStrap.Navbar.Toggle aria-controls="basic-navbar-nav" />
             <ReactBootStrap.Navbar.Collapse id="basic-navbar-nav">
                 <ReactBootStrap.Nav className="mr-auto">

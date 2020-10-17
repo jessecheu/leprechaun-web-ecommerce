@@ -4,7 +4,11 @@ import ThreeYearLogo from '../../assets/three-year-logo.png';
 import ShieldLogo from '../../assets/shields-logo.png';
 import LightningPackageLogo from '../../assets/lightning-package-logo.png';
 
+import { attributes } from '../../content/generalinfocomponent.md'
+
 export function GeneralInformation() {
+
+    const  { title, body, pictures } = attributes;
     return (
         <Container fluid>
             <Row>
@@ -12,17 +16,20 @@ export function GeneralInformation() {
 
                 </Col>
                 <Col xs={5}>
-                <h2>Why you can trust and choose RPGStock</h2>
+                <h2>{title}</h2>
                     <p>
-                        RPGStock has been operating in this market for over three years and we strive
-                        to provide the safest place to purchase Old School Runescape. You are shielded, We 
-                        use only the best trained accounts and you will only get the best service. The delivery
-                        and updates are almost constantly updated and lightning fast. 
+                        {body}
                     </p>
                 <center>
-                    <img src={ThreeYearLogo} alt="Three Years in the Market Logo" />
+                    {/* <img src={ThreeYearLogo} alt="Three Years in the Market Logo" />
                     <img src={ShieldLogo} alt="Shielded transactions" width="200px" height="150px"/>
-                    <img src={LightningPackageLogo} alt="Lightning Fast Packages" width="200px" height="150px"/>       
+                    <img src={LightningPackageLogo} alt="Lightning Fast Packages" width="200px" height="150px"/>        */}
+                    {pictures && 
+                     pictures.map((picture) => {
+                         <div>
+                             <img src={pictures.picture} alt={picture.alttext} width="200px" height="150px"/>        
+                         </div>
+                     })}
                 </center>
                 </Col>
             </Row>

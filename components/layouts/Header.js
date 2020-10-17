@@ -8,7 +8,7 @@ import { attributes } from '../../content/logocomponent.md';
 class Header extends Component {
 
     render(){
-      const { image, alttext } = attributes;
+      const { headerimage, alttext } = attributes;
       return(
         <div className="my-header">
           <div className="top-bar">
@@ -23,7 +23,7 @@ class Header extends Component {
             </div>
           </div>
           <a href="/">
-            <img src={image} alt={alttext} width="400px" height="" style={{display: 'block', marginLeft: 'auto', marginRight: 'auto'}}/>
+            <img src={headerimage} alt={alttext} width="400px" height="" style={{display: 'block', marginLeft: 'auto', marginRight: 'auto'}}/>
           </a>
         </div>
       );

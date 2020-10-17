@@ -13,6 +13,21 @@ collections:
       fields: 
         - { label: 'Header Image', name: "headerimage", widget: 'image'}
         - { label: 'Alt Text', name: "alttext", widget: 'string'}
+  - name: "generalinfocomponent"
+    label: "General Information Component"
+    files:
+    - label: "General Information Component"
+      name: "generalinfocomponent"
+      file: "content/generalinfocomponent.md"
+      fields: 
+       - { label: 'Title', name: 'title', widget: 'string'}
+       - { label: 'Body', name: 'body', widget: 'string'}
+       - label: "Pictures"
+         name: 'pictures'
+         widget: list
+         fields: 
+           - { label: "Picture", name: "picture", widget: "image"}
+           - { label: "Alt Text", name: "alttext", widget: "string"}
   - name: "termsofservice"
     label: "Terms of Service"
     files:
