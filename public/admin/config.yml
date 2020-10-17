@@ -12,7 +12,7 @@ collections:
       file: "content/logocomponent.md"
       fields: 
         - { label: 'Header Image', name: "headerimage", widget: 'image'}
-        - { label: 'Alt Text', name: "alttext", widget: 'String'}
+        - { label: 'Alt Text', name: "alttext", widget: 'string'}
   - name: "termsofservice"
     label: "Terms of Service"
     files:
