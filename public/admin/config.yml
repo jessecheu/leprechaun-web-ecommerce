@@ -4,6 +4,22 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
+  - name: "siteinformation"
+    label: "Site Information"
+    files: 
+    - label: "Site Information"
+      name: "Site Information"
+      file: "content/siteinformation.md"
+      fields: 
+        - { label: 'Site Title', name: "sitetitle", widget: 'string'}
+  - name: "headercomponent"
+    label: "Header Component"
+    files: 
+    - label: "Header Component"
+      name: "headercomponent"
+      file: "content/headercomponent.md"
+      fields: 
+        - { label: 'Header Image', name: "headerimage", widget: 'image'}
   - name: "termsofservice"
     label: "Terms of Service"
     files:

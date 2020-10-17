@@ -3,9 +3,14 @@ import RPGStocklogo from "../../assets/RPGStock-logo.png";
 
 import { getToken, clearToken } from "../../utils";
 
+import { siteInfo } from '../../content/siteinformation.md';
+import { headerComponent } from '../../content/headercomponent.md';
+
 class Header extends Component {
 
     render(){
+      // const { image } = headerComponent;
+      // const { sitetitle } = siteInfo;
       return(
         <div className="my-header">
           <div className="top-bar">
@@ -20,7 +25,7 @@ class Header extends Component {
             </div>
           </div>
           <a href="/">
-            <img src={RPGStocklogo} alt="RPGStock logo" width="400px" height="" style={{display: 'block', marginLeft: 'auto', marginRight: 'auto'}}/>
+            <img src={RPGStocklogo} alt={`RPGStock Logo`} width="400px" height="" style={{display: 'block', marginLeft: 'auto', marginRight: 'auto'}}/>
           </a>
         </div>
       );
