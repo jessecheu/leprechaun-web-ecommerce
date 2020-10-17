@@ -44,7 +44,7 @@ collections:
         name: "sections"
         widget: list
         fields:
-          - { label: "Picture", name: "picture", widget: 'images'}
+          - { label: "Picture", name: "picture", widget: 'image'}
           - { label: "Text", name: "text", widget: 'string'}
   - name: "termsofservice"
     label: "Terms of Service"

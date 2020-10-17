@@ -14,7 +14,7 @@ export const HowToBegin = () => {
          {/*  How to Begin Component */}
          <div className="sub-body">
          <hr/> 
-                <div className="container">
+                {/* <div className="container">
                     <div className="row">
                         <div className="col-md-12">
                             <center><h1 className="title">{title}</h1></center>
@@ -60,7 +60,7 @@ export const HowToBegin = () => {
                             </div>  
                         </div>                          
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
