@@ -49,15 +49,15 @@ collections:
           - { label: "Sub Picture", name: "subpicture", widget: 'image'}
           - { label: "Sub Picture Alt Text", name: "subalttext", widget: 'string'}
           - { label: "Text", name: "text", widget: 'string'}
-  - name: "RWT Information Component"
-    label: "rwtinfocomponent"
+  - name: "rwtinfocomponent"
+    label: "RWT Information Component"
     files:
     - label: "RWT Information Component"
       name: "rwtinfocomponent"
       file: "content/rwtinfocomponent.md"
       fields:
       - { label: "Title", name: "title", widget: "string"}
-      - { label: "Body Paragraph", name: "bodyparagraph", widget: 'markdown'}
+      - { label: "Body Paragraph", name: "body", widget: 'markdown'}
 
 
   - name: "termsofservice"

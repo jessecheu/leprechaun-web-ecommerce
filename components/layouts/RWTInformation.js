@@ -18,6 +18,7 @@ function RWTInformation() {
                     <p className="left-positioned-text">
                     </p>
                     <BodyContent />
+                    {bodyparagraph}
                     {/* <ol>
                         <li className="left-positioned-text">We use aged accounts, most of our accounts are over 1 Year old</li>
                         <li className="left-positioned-text">Our Accounts are trained, we will never use lvl 3 accounts to trade you</li>
