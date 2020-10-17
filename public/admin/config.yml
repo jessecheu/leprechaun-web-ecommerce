@@ -58,8 +58,24 @@ collections:
       fields:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Body Paragraph", name: "body", widget: 'markdown'}
-
-
+  - name: "showcasecomponent"
+    label: "Showcase Component"
+    files:
+    - label: "Show Case Component"
+      name: "showcasecomponent"
+      file: "content/showcasecomponent.md"
+      fields: 
+      - { label: "Title", name: "title", widget: "string"}
+      - label: "Card"
+        name: "card"
+        widget: list
+        fields:
+          - { label: "Name", name: "name", widget: 'image'}
+          - { label: "Name Alt Text", name: "namealttext", widget: 'string'}
+          - { label: "Donor Rank", name: "donorrank", widget: 'image'}
+          - { label: "Donor Rank Alt Text", name: "donorrankalttext", widget: 'string'}
+          - { label: "Link (URL)", name: "url", widget: 'string'}
+          - { label: "Message", name: "message", widget: 'string'}
   - name: "termsofservice"
     label: "Terms of Service"
     files:

@@ -5,7 +5,7 @@ import GamingLogo from '../../assets/gaminglogo.png';
 import { attributes, react as BodyContent } from '../../content/rwtinfocomponent.md'
 
 function RWTInformation() {
-    const { title, bodyparagraph } = attributes;
+    const { title } = attributes;
     return (
         <div>
         <Container fluid>
@@ -18,7 +18,6 @@ function RWTInformation() {
                     <p className="left-positioned-text">
                     </p>
                     <BodyContent />
-                    {bodyparagraph}
                     {/* <ol>
                         <li className="left-positioned-text">We use aged accounts, most of our accounts are over 1 Year old</li>
                         <li className="left-positioned-text">Our Accounts are trained, we will never use lvl 3 accounts to trade you</li>
