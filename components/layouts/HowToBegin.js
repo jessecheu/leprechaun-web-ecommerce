@@ -5,6 +5,8 @@ import OrangeArrow from './HowToBeginPictures/orangearrow.png';
 import OrangeNotepad from './HowToBeginPictures/orangenotepad.png';
 import AgreementPicture from './HowToBeginPictures/agreement.png';
 
+import { attributes } from "../../content/howtobegincomponent.md"
+
 export const HowToBegin = () => {
     return (
         <div>
@@ -47,16 +49,15 @@ export const HowToBegin = () => {
                             <div className="col-md-1">
                                 <img className="arrowimage" alt="" src={OrangeArrow} width="100px"/>
                             </div>
-                        </div>
-                        <div className="row justify-content-center">
-                        <div className="col-md-4">
+                        
+                            <div className="col-md-4">
                                 <img src={AgreementPicture} alt="Agreement" width="100px"/>
                                 <h6>
                                     We complete the trade by trading the goods or service on 
                                     the terms that we agreed to.
                                 </h6>
-                            </div>                            
-                        </div>
+                            </div>  
+                        </div>                          
                     </div>
                 </div>
             </div>
