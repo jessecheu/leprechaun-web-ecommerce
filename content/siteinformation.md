@@ -1,3 +1,0 @@
----
-sitetitle: RPGStock
----

@@ -4,22 +4,15 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - name: "siteinformation"
-    label: "Site Information"
+  - name: "logocomponent"
+    label: "Logo Component"
     files: 
-    - label: "Site Information"
-      name: "Site Information"
-      file: "content/siteinformation.md"
-      fields: 
-        - { label: 'Site Title', name: "sitetitle", widget: 'string'}
-  - name: "headercomponent"
-    label: "Header Component"
-    files: 
-    - label: "Header Component"
-      name: "headercomponent"
-      file: "content/headercomponent.md"
+    - label: "Logo Component"
+      name: "logocomponent"
+      file: "content/logocomponent.md"
       fields: 
         - { label: 'Header Image', name: "headerimage", widget: 'image'}
+        - { label: 'Alt Text', name: "alttext", widget: 'String'}
   - name: "termsofservice"
     label: "Terms of Service"
     files:
