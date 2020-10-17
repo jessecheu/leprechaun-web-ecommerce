@@ -47,16 +47,16 @@ class Checkout extends React.Component{
             e.target.value === 'XRP (XRP)' ){
             localFees = 0;
         }else if(e.target.value === 'Cashapp Balance'){
-            const cashappfee = 1.14; 
+            const cashappfee = 1.22; 
             localFees = ((localPrice)*cashappfee)-localPrice; 
         }else if(e.target.value === 'PayPal'){
-            const paypalfee = 1.18; 
+            const paypalfee = 1.22; 
             localFees = ((localPrice)*paypalfee)-localPrice; 
         }else if(e.target.value === 'Venmo Balance'){
             const venmofee = 1.22;
             localFees = ((localPrice)*venmofee)-localPrice; 
         }else if(e.target.value === 'Zelle'){
-            const zellefee = 1.25;
+            const zellefee = 1.22;
             localFees = ((localPrice)*zellefee)-localPrice; 
         }
         localFees = parseFloat(localFees.toFixed(3))
