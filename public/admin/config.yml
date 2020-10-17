@@ -54,7 +54,7 @@ collections:
     files:
     - label: "RWT Information Component"
       name: "rwtinfocomponent"
-      files: "/content/rwtinfocomponent.md"
+      files: "content/rwtinfocomponent.md"
       fields:
       - { label: "Title", name: "title", widget: "string"}
       - { label: "Body Paragraph", name: "bodyparagraph", widget: 'markdown'}
