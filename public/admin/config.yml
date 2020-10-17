@@ -28,10 +28,10 @@ collections:
          fields: 
            - { label: "Picture", name: "picture", widget: "image"}
            - { label: "Alt Text", name: "alttext", widget: "string"}
-        - { label: 'Second Title', name: 'secondtitle', widget: 'string'}
-        - { label: 'Second Body', name: 'secondbody', widget: 'string'}
-        - { label: 'Third Title', name: 'thirdtitle', widget: 'string'}
-        - { label: 'Third Body', name: 'thirdbody', widget: 'string'}
+       - { label: 'Second Title', name: 'secondtitle', widget: 'string'}
+       - { label: 'Second Body', name: 'secondbody', widget: 'string'}
+       - { label: 'Third Title', name: 'thirdtitle', widget: 'string'}
+       - { label: 'Third Body', name: 'thirdbody', widget: 'string'}
   - name: "howtobegincomponent"
     label: "How to Begin Component"
     files:
