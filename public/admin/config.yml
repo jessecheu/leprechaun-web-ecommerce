@@ -45,6 +45,9 @@ collections:
         widget: list
         fields:
           - { label: "Picture", name: "picture", widget: 'image'}
+          - { label: "Alt Text", name: "alttext", widget: 'string'}
+          - { label: "Sub Picture", name: "subpicture", widget: 'image'}
+          - { label: "Sub Picture Alt Text", name: "subalttext", widget: 'string'}
           - { label: "Text", name: "text", widget: 'string'}
   - name: "termsofservice"
     label: "Terms of Service"

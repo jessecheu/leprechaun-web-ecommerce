@@ -7,26 +7,31 @@ import AgreementPicture from './HowToBeginPictures/agreement.png';
 
 import { attributes } from "../../content/howtobegincomponent.md"
 
+import {Container, Col, Row} from 'react-bootstrap'
+
 export const HowToBegin = () => {
-    const { title } = attributes;
+    const { title, sections } = attributes;
     return (
         <div>
          {/*  How to Begin Component */}
          <div className="sub-body">
-         <hr/> 
-                {/* <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
+         <hr/>
+                 <Container>
+                    <Row>
+                        <Col md={12}>
                             <center><h1 className="title">{title}</h1></center>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-3">
-                                <img src={GettingStartedPicture} alt="Getting Started" width="200px"/>
-                                <h6>
-                                    Get started by talking to an agent using the live chat window
-                                    at the bottom right of your screen!                         
-                                </h6>
-                            </div>
+                        </Col>
+                        {sections.map((section) => (
+                                <Col md={3}>
+                                    <center><img src={section.picture} alt={section.alttext} height="100px" width="100px"/></center>
+                                    <h6>
+                                        {section.text}
+                                    </h6>
+                                    <center><img src={section.subpicture} alt={section.subalttext}  width="100px"/></center>
+                                </Col>
+                        ))}
+                        {/*<div className="row">
+                            
                             <div className="col-md-1">
                                 <img className="arrowimage" alt="" src={OrangeArrow} width="100px"/>
                             </div>
@@ -58,9 +63,9 @@ export const HowToBegin = () => {
                                     the terms that we agreed to.
                                 </h6>
                             </div>  
-                        </div>                          
-                    </div>
-                </div> */}
+                        </div>   */}                       
+                    </Row>
+                </Container> 
             </div>
         </div>
     )
