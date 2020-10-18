@@ -17,8 +17,9 @@ class Feedback extends React.Component {
 
 
     render(){
-        const { trustpilotreviews } = attributes;
-        const sortedReviews = trustpilotreviews.sort((a, b) => b.id - a.id)
+        const { trustpilotreviews, miscreviews } = attributes;
+        const sortedTrustpilotReviews = trustpilotreviews.sort((a, b) => b.id - a.id)
+        const sortedMiscReviews = miscreviews.sort((a, b) => b.id - a.id)
     return (
         <div>
         <Helmet>
@@ -64,8 +65,8 @@ class Feedback extends React.Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {sortedReviews &&
-                                            sortedReviews.map((review) => {
+                                        {sortedTrustpilotReviews &&
+                                            sortedTrustpilotReviews.map((review) => {
                                                 if(review.category.toLowerCase() === ("trustpilot")){
                                                    
                                                     return(
@@ -99,8 +100,8 @@ class Feedback extends React.Component {
                                     </thead>
                                     <tbody>
                                         
-                                        {sortedReviews &&
-                                            sortedReviews.map((review) => {
+                                        {sortedMiscReviews &&
+                                            sortedMiscReviews.map((review) => {
                                                 if(review.category.toLowerCase() === ("misc") || 
                                                     review.category.toLowerCase() === ("sythe") ||
                                                     review.category.toLowerCase() === ("osbot") ||

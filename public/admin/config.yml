@@ -208,8 +208,8 @@ collections:
             - { label: "Category", name: "category", widget: "select", options: ["TrustPilot", "Sythe", "OSBot", "EpicNPC"]}
             - { label: "Link", name: "link", widget: "string" }
             - { label: "Publish Date", name: "publishdate", widget: "datetime", default: '', date_format: "DD.MM.YYYY", format: "LLL", picker_utc: false}
-        - label: 'Sythe Reviews'
-          name: "sythereviews"
+        - label: 'Misc Reviews'
+          name: "miscreviews"
           widget: list
           fields:
             - { label: "Identifier", name: "id", widget: "string"}

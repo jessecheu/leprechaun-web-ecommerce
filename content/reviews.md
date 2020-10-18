@@ -114,7 +114,7 @@ trustpilotreviews:
     message: super fast to add me and quicky traded me money after i sent!
     name: Ryan
     publishdate: 'July 20, 2020 12:00 AM'
-sythereviews:
+miscreviews:
   - category: Sythe
     id: '0.01'
     link: 'https://www.sythe.org/posts/30491576/'
