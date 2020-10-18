@@ -44,5 +44,22 @@ imagesection:
     image: /img/bitcoinacceptedhere.png
   - alttext: PayPal Accepted Here
     image: /img/paypalacceptedhere.png
+visualicons:
+  - alttext: Bitcoin Icon
+    icons: /img/bitcoin-icon.png
+  - alttext: Ethereum Logo
+    icons: /img/ethereum-icon.png
+  - alttext: Litecoin Icon
+    icons: /img/litecoin-icon.png
+  - alttext: XRP Icon
+    icons: /img/xrp-icon.png
+  - alttext: PayPal Icon
+    icons: /img/paypal-icon.png
+  - alttext: CashApp Icon
+    icons: /img/cashapp-icon.png
+  - alttext: Venmo Icon
+    icons: /img/venmo-icon.png
+  - alttext: Revolut Icon
+    icons: /img/revolut-icon.png
 ---
 
