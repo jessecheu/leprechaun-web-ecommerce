@@ -36,6 +36,7 @@ Sections:
         subsectionurl: /terms-of-service
       - subsectiontitle: Privacy Policy
         subsectionurl: /privacy-policy
+imagesectiontitle: Payment Methods
 imagesection:
   - alttext: Coinbase Accepted Here Logo
     image: /img/coinbase-logo.png
