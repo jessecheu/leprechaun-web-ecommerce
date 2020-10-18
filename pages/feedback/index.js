@@ -3,7 +3,7 @@ import { Container, Row, Col, Tabs, Tab, Table, Nav} from 'react-bootstrap';
 import { Helmet } from 'react-helmet';
 import ReviewCard from './ReviewCard'
 import { attributes } from '../../content/reviews.md';
-import TrustPilot from '../../assets/socialmediaicons/trustpilot-icon.png';
+import TrustPilot from '../../assets/trustpilot-icon.png';
 import SytheHeader from './sytheheader.png'
 
 const reviews = attributes.reviews
@@ -12,12 +12,11 @@ class Feedback extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            // numOfTrustPilotReviews: 0
+            
         }
     }
 
     render(){
-        // const sortedReviews = reviews.sort((a,b ) => b.publishdate.localeCompare(a.publishdate))
         const sortedReviews = reviews.sort((a, b) => b.id - a.id)
     return (
         <div>
