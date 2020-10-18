@@ -39,6 +39,17 @@ collections:
               fields:
                 - { label: "Sub Section Title", name: "subsectiontitle", widget: "string"}
                 - { label: "Sub Section URL", name: "subsectionurl", widget: "string"}
+        - label: "Image Section"
+          name: "imagesection"
+          widget: list
+          fields: 
+            - { label: "title", name: "title", widget: "string"}
+            - label: "Images"
+              name: "images"
+              widget: list
+              fields: 
+                - { label: "Image", name: "image", widget: "image"}
+                - { label: "Alt Text", name: "alttext", widget: "string"}
   - name: "generalinfocomponent"
     label: "General Information Component"
     files:
