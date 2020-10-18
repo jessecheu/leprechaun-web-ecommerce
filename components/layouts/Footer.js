@@ -30,13 +30,13 @@ const Footer = () => {
                     <Col md={3}>
 
                         <h4>{imagesectiontitle}</h4>
-                        {imagesection &&
-                            imagesection.map((imagesection, k) => (
-                                <li className="list-unstyled">
+                        <li className="list-unstyled">
+                            {imagesection &&
+                                imagesection.map((imagesection, k) => (
                                     <img src={imagesection.image} alt={imagesection.alttext} width="80px" height="40px"/>
-                                </li>
-                            ))
-                        }
+                                ))
+                            }
+                        </li>
                         <h4>Payment Methods</h4>
                         <ul className="list-unstyled">
                             <li>
