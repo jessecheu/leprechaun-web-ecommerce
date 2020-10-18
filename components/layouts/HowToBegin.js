@@ -15,8 +15,8 @@ export const HowToBegin = () => {
                         <Col md={12}>
                             <center><h1 className="title">{title}</h1></center>
                         </Col>
-                        {sections.map((section) => (
-                                <Col md={3}>
+                        {sections.map((section, k) => (
+                                <Col key={k} md={3}>
                                     <center><img src={section.picture} alt={section.alttext} height="100px" width="100px"/></center>
                                     <h6>
                                         {section.text}

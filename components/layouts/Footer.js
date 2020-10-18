@@ -1,12 +1,8 @@
 import React from 'react';
-import CoinbaseLogo from '../../assets/coinbase-logo.png';
-import PaypalAcceptedHere from '../../assets/paypalacceptedhere.png';
-import BitcoinAcceptedHere from '../../assets/bitcoinacceptedhere.png';
-import SytheLogo from './FooterIcons/sythelogo.png';
-import FacebookIcon from '../../assets/socialmediaicons/facebook-icon.png';
-import TwitterIcon from '../../assets/socialmediaicons/twitter-icon.png';
 import { Container, Row, Col} from 'react-bootstrap';
 import { attributes } from '../../content/footercomponent.md'
+
+import BitcoinIcon from '../../assets/icons/bitcoin-icon.png'
 
 const Footer = () => {
     const { text, icons, Sections, imagesectiontitle, imagesection } = attributes;
@@ -28,26 +24,19 @@ const Footer = () => {
                         ))
                     }
                     <Col md={3}>
-
                         <h4>{imagesectiontitle}</h4>
                         <li className="list-unstyled">
                             {imagesection &&
                                 imagesection.map((imagesection, k) => (
-                                    <img src={imagesection.image} alt={imagesection.alttext} width="80px" height="40px"/>
+                                    <img key={k} src={imagesection.image} alt={imagesection.alttext} width="80px" height="40px"/>
                                 ))
                             }
                         </li>
-                        <h4>Payment Methods</h4>
-                        <ul className="list-unstyled">
-                            <li>
-                                <img src={CoinbaseLogo} alt="Coinbase Cryptocurrencies Accepted here" width="80px" height="40px"/>
-                                <img src={PaypalAcceptedHere} alt="PayPal Accepted Here" width="80px" height="40px"/>
-                                <img src={BitcoinAcceptedHere} alt="Bitcoin Accepted Here" width="80px" height="40px"/>
-                                <br />
-                                {/* <img src={AndMore} alt="And More Payment methods Accepted" width="80px" height="40px"/> */}
-                            </li>
-                        </ul>
                     </Col>
+                </Row>
+                <hr />
+                <Row className="justify-content-center">
+                    <img src={BitcoinIcon} width="30px"/>        
                 </Row>
                 <hr />
                 <Row className="text-center">

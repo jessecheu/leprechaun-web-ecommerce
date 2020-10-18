@@ -46,6 +46,12 @@ collections:
           fields: 
             - { label: "Image", name: "image", widget: "image"}
             - { label: "Alt Text", name: "alttext", widget: "string"}
+        - label: "Visual Icons"
+          name: "visualicons"
+          widget: list
+          fields: 
+            - { label: "Icons", name: "icons", widget: "image"}
+            - { label: "Alt Text", name: "alttext", widget: "string"}
   - name: "generalinfocomponent"
     label: "General Information Component"
     files:

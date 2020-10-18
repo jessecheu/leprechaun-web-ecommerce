@@ -18,7 +18,7 @@ function PaymentMethodModal(props) {
         <Modal.Body>
           <p>
             You are purchasing <b>{props.amount}M</b> {props.product}
-            at {props.rate}/M, you will be paying <b>${props.price}</b>
+            at Estimated Rate: {props.rate}/M, you will be paying <b>${props.price}</b>
             <hr />
 
             Please <b>contact a live chat agent</b> using the bottom right live chat widget or
@@ -36,9 +36,11 @@ function PaymentMethodModal(props) {
             <br />
             Amount: <b>{props.amount}</b>
             <br />
-            Rate: <b>{props.rate}/M</b>
+            Estimated Updated Rate: <b>{props.rate}/M</b>
             <br />
-            Price: <b>${props.price}</b>
+            Fee: <b>${props.fees}</b>
+            <br/>
+            Total Price: <b>${props.price}</b>
             </p>
             <center>*These rates and amount are an estimate, indiciation, and is not final unless authorized by staff*</center>
             <br />

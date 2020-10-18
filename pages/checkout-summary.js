@@ -58,6 +58,8 @@ class Checkout extends React.Component{
         }else if(e.target.value === 'Zelle'){
             const zellefee = 1.22;
             localFees = ((localPrice)*zellefee)-localPrice; 
+        }else {
+            localFees = ((localPrice)*1)-localPrice; 
         }
         localFees = parseFloat(localFees.toFixed(3))
         const afterprice = util.formatNumber(parseFloat((localPrice)+localFees))
