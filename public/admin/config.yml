@@ -194,12 +194,26 @@ collections:
   - name: "reviews"
     label: "Feedback And Reviews"
     files:
-    - label: "Feedback And Reviews"
-      name: "reviews"
+    - label: "TrustpilotReviews"
+      name: "trustpilotreviews"
       file: "content/reviews.md"
       fields:
-        - label: 'Feedback And Reviews'
-          name: "reviews"
+        - label: 'TrustPilot Reviews'
+          name: "trustpilotreviews"
+          widget: list
+          fields:
+            - { label: "Identifier", name: "id", widget: "string"}
+            - { label: "Name", name: "name", widget: "string"}
+            - { label: "Message", name: "message", widget: "markdown" }
+            - { label: "Category", name: "category", widget: "select", options: ["TrustPilot", "Sythe", "OSBot", "EpicNPC"]}
+            - { label: "Link", name: "link", widget: "string" }
+            - { label: "Publish Date", name: "publishdate", widget: "datetime", default: '', date_format: "DD.MM.YYYY", format: "LLL", picker_utc: false}
+    - label: "SytheReviews"
+      name: "sythereviews"
+      file: "content/reviews.md"
+      fields:
+        - label: 'Sythe Reviews'
+          name: "sythereviews"
           widget: list
           fields:
             - { label: "Identifier", name: "id", widget: "string"}

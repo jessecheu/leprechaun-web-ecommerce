@@ -5,8 +5,9 @@ import ReviewCard from './ReviewCard'
 import { attributes } from '../../content/reviews.md';
 import TrustPilot from '../../assets/trustpilot-icon.png';
 import SytheHeader from './sytheheader.png'
+import { attributes } from '../../content/feedbackandreviews.md'
 
-const reviews = attributes.reviews
+const { reviews } = attributes;
 
 class Feedback extends React.Component {
     constructor(props){
