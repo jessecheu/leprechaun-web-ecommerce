@@ -82,26 +82,6 @@ trustpilotreviews:
     message: "Bought a $25 RP Card from Them, Great Website and Customer Services.. Would Highly Recommend!\r\n\n\r\n\n100/10!!!!"
     name: Brennan Davis
     publishdate: 'June 29, 2020 12:00 AM'
-  - category: Sythe
-    id: '0.01'
-    link: 'https://www.sythe.org/posts/30491576/'
-    message: Vouch sold me 200m smoothly.
-    name: Mootrucks
-    publishdate: 'May 6, 2018 3:40 PM'
-  - category: Sythe
-    id: '0.02'
-    link: 'https://www.sythe.org/posts/30492387/'
-    message: 'Sold me 200m 07. Smooth trade, tyvm! :)'
-    name: King
-    publishdate: 'May 6, 2018 3:40 PM'
-  - category: Sythe
-    id: '0.03'
-    link: 'https://www.sythe.org/posts/30492611/'
-    message: >-
-      Huge vouch for this man, bought 6b+ 07 off him over the course of a few
-      months. Always friendly and easy to deal with, much appreciated!
-    name: Searchy
-    publishdate: 'May 6, 2018 3:40 PM'
   - category: TrustPilot
     id: '12'
     link: 'https://www.trustpilot.com/reviews/5efd43c43f06f20a94d654f2'
@@ -134,5 +114,12 @@ trustpilotreviews:
     message: super fast to add me and quicky traded me money after i sent!
     name: Ryan
     publishdate: 'July 20, 2020 12:00 AM'
+sythereviews:
+  - category: Sythe
+    id: '0.01'
+    link: 'https://www.sythe.org/posts/30491576/'
+    message: Vouch sold me 200m smoothly.
+    name: Mootrucks
+    publishdate: 'May 6, 2018 12:00 AM'
 ---
 
