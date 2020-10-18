@@ -5,7 +5,7 @@ import { attributes } from '../../content/footercomponent.md'
 import BitcoinIcon from '../../assets/icons/bitcoin-icon.png'
 
 const Footer = () => {
-    const { text, icons, Sections, imagesectiontitle, imagesection } = attributes;
+    const { text, icons, Sections, imagesectiontitle, imagesection, visualicons } = attributes;
     return(
         <div className="main-footer" style={{padding: '4px', paddingTop: '0px', backgroundColor: 'white'}}>
             <Container>
@@ -36,7 +36,11 @@ const Footer = () => {
                 </Row>
                 <hr />
                 <Row className="justify-content-center">
-                    <img src={BitcoinIcon} width="30px"/>        
+                    {visualicons &&
+                        visualicons.map((singleicon) => (
+                            <a href="/paymentmethods"><img src={singleicon.icons} alt={singleicon.alttext} height="30px" width="30px"/></a>
+                        ))
+                    }        
                 </Row>
                 <hr />
                 <Row className="text-center">

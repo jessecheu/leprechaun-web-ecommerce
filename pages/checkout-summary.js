@@ -13,6 +13,7 @@ import PayPalIcon from '../assets/icons/paypal-icon.png'
 import CashappIcon from '../assets/icons/cashapp-icon.png';
 import VenmoIcon from '../assets/icons/venmo-icon.png'
 import ZelleIcon from '../assets/icons/zelle-icon.png';
+import RevolutIcon from '../assets/icons/revolut-icon.png';
 
 import PaymentMethodModal from '../components/ExtraComponents/PaymentMethodModal'
 
@@ -55,9 +56,9 @@ class Checkout extends React.Component{
         }else if(e.target.value === 'Venmo Balance'){
             const venmofee = 1.22;
             localFees = ((localPrice)*venmofee)-localPrice; 
-        }else if(e.target.value === 'Zelle'){
-            const zellefee = 1.22;
-            localFees = ((localPrice)*zellefee)-localPrice; 
+        }else if(e.target.value === 'Revolut'){
+            const revolutfee = 1.22;
+            localFees = ((localPrice)*revolutfee)-localPrice; 
         }else {
             localFees = ((localPrice)*1)-localPrice; 
         }
@@ -288,16 +289,16 @@ class Checkout extends React.Component{
                                     <Card style={{ width: '10rem', height: '8rem'  }}>
                                         <Card.Body>
                                             <center>
-                                                <Card.Title>Zelle</Card.Title>
-                                                <Card.Subtitle className="mb-2 text-muted"><img src={ZelleIcon} width="40px"/></Card.Subtitle>
+                                                <Card.Title>Revolut</Card.Title>
+                                                <Card.Subtitle className="mb-2 text-muted"><img src={RevolutIcon} width="40px"/></Card.Subtitle>
                                             </center>
                                         </Card.Body>
                                     </Card>
                                     <input
                                         name="payment-group" 
                                         type="radio" 
-                                        value="Zelle" 
-                                        checked={paymentMethod === "Zelle"}
+                                        value="Revolut" 
+                                        checked={paymentMethod === "Revolut"}
                                         onChange={this.onChangePaymentMethod} 
                                     />  
                                 </label>         
