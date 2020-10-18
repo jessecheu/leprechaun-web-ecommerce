@@ -114,6 +114,129 @@ trustpilotreviews:
     message: super fast to add me and quicky traded me money after i sent!
     name: Ryan
     publishdate: 'July 20, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '17'
+    link: 'https://www.trustpilot.com/reviews/5f1654313f06f2061435b3e8'
+    message: 'Bought 1 month playstation membership. Was fast, thank you!'
+    name: Infernal Tow
+    publishdate: 'July 20, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '18'
+    link: 'https://www.trustpilot.com/reviews/5f18b7591a5a69071c93520d'
+    message: >-
+      Purchased a $50 RP card. Skeptical at first but seller makes me
+      comfortable and easy to work with. The code works and now he's my go-to if
+      I need any RP. Trustworthy and reliable. Thank you!
+    name: PhuGamer
+    publishdate: 'July 22, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '19'
+    link: 'https://www.trustpilot.com/reviews/5f18d9e71a5a69071c935e18'
+    message: >-
+      Got a Valorant Gift Card really quick and easy! He is very prompt and
+      friendly. Overall a positive experience. I would recommend this website.
+    name: D
+    publishdate: 'July 22, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '20'
+    link: 'https://www.trustpilot.com/reviews/5f1a1c9a1a5a69075065e3b4'
+    message: Bought $10 RP.
+    name: Nezloe
+    publishdate: 'July 23, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '21'
+    link: 'https://www.trustpilot.com/reviews/5f1f37e01a5a69075068a0b2'
+    message: Very Quick and Easy ! Will be coming back for my weekly purchases ! Thanks
+    name: Chris
+    publishdate: 'July 27, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '22'
+    link: 'https://www.trustpilot.com/reviews/5f2481871a5a6907a477fedd'
+    message: >-
+      bought 20m ez. guy took cashapp so that was convenient asf. good
+      confirmation, fast trade.
+    name: esketit
+    publishdate: 'July 31, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '23'
+    link: 'https://www.trustpilot.com/reviews/5f26027c1a5a690a041d8444'
+    message: 'Easy, and quick transaction, highly recommend. - EL REY'
+    name: Emmanuel Vazquez
+    publishdate: 'August 1, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '24'
+    link: 'https://www.trustpilot.com/reviews/5f26349a1a5a690a041d8b01'
+    message: 'very fast transaction, all smooth'
+    name: Goer Gops
+    publishdate: 'August 1, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '25'
+    link: 'https://www.trustpilot.com/reviews/5f28dfcd1a5a690a041ee917'
+    message: Quick fast and courteous. Will do business again.
+    name: logan
+    publishdate: 'August 3, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '26'
+    link: 'https://www.trustpilot.com/reviews/5f31eab21a5a69026847418a'
+    message: Sold 215M 1 trade quick deal would recommend
+    name: David Hackworth
+    publishdate: 'August 10, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '27'
+    link: 'https://www.trustpilot.com/reviews/5f3762449cc22a073c981669'
+    message: fast and trusted
+    name: brewdogg
+    publishdate: 'August 14, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '28'
+    link: 'https://www.trustpilot.com/reviews/5f5c3de502e8570acc3645d2'
+    message: >-
+      BOUGHT 135M 07 AND I SENT VIA PAYPAL GIFT FIRST. DUDES LEGIT ASF!!!!!!
+      WILL HIGHLY RECCOMEND
+    name: Angelo T
+    publishdate: 'September 11, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '29'
+    link: 'https://www.trustpilot.com/reviews/5f60187802e8570acc381bee'
+    message: Thank you for for working with me!
+    name: mitch
+    publishdate: 'September 14, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '30'
+    link: 'https://www.trustpilot.com/reviews/5f726c9d798e6f0960225b6c'
+    message: fast and ez ty
+    name: scaper
+    publishdate: 'September 28, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '31'
+    link: 'https://www.trustpilot.com/reviews/5f72b9a3798e6f0aa4e6caf0'
+    message: "quickest trade i've had, 10/10\r\n\nright to the point send money get gold!!"
+    name: schufflEE
+    publishdate: 'September 28, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '32'
+    link: 'https://www.trustpilot.com/reviews/5f76b6eb798e6f0b341c5a3e'
+    message: Transaction was quick and I received the code relatively quickly.
+    name: TechPudding
+    publishdate: 'October 1, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '33'
+    link: 'https://www.trustpilot.com/reviews/5f7aadce798e6f0b341e2a32'
+    message: Fast and great communication
+    name: Eric M
+    publishdate: 'October 4, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '34'
+    link: 'https://www.trustpilot.com/reviews/5f7fcf93798e6f0784a91854'
+    message: quick service. chat was smooth and very helpful. thanks again
+    name: joe
+    publishdate: 'October 8, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '35'
+    link: 'https://www.trustpilot.com/reviews/5f80bf73798e6f0b94f40cf5'
+    message: Quick and efficient. Very easy process to purchase and very helpful staff.
+    name: Sandra
+    publishdate: 'October 9, 2020 12:00 AM'
 miscreviews:
   - category: Sythe
     id: '0.01'
