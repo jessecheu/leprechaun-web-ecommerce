@@ -6,8 +6,10 @@ import SytheLogo from './FooterIcons/sythelogo.png';
 import FacebookIcon from '../../assets/socialmediaicons/facebook-icon.png';
 import TwitterIcon from '../../assets/socialmediaicons/twitter-icon.png';
 import { Container, Row, Col} from 'react-bootstrap';
+import { attributes } from '../../content/footercomponent.md'
 
 const Footer = () => {
+    const { text, icons } = attributes;
     return(
         <div className="main-footer" style={{padding: '4px', paddingTop: '0px', backgroundColor: 'white'}}>
             <Container>
@@ -54,11 +56,13 @@ const Footer = () => {
                 </Row>
                 <hr />
                 <Row className="text-center">
-                        <p  className="col-sm"> &copy;{new Date().getFullYear()} RPGStock | 
-                        Buy and Sell Video Game Items | All Rights Reserved |
-                        <a target="_target" rel="noopener noreferrer" href="https://www.facebook.com/RPGStock"><img src={FacebookIcon} alt="Facebook icon" width="auto" height="45px"/></a>
-                        <a target="_target" rel="noopener noreferrer" href="#"><img src={TwitterIcon} alt="Twitter icon" width="auto" height="45px"/></a>
-                        <a target="_target" rel="noopener noreferrer" href="http://sythe.org/register.php?do=register&r=741875"><img src={SytheLogo} alt="SytheLogo" width="75px"/></a>
+                        <p  className="col-sm"> &copy; 2017 - {new Date().getFullYear()} {text}
+                            {icons.map((icon)=> (
+                                <a target="_target" rel="noopener noreferrer" href="https://www.facebook.com/RPGStock"><img src={FacebookIcon} alt="Facebook icon" width="auto" height="25px"/></a>
+                            ))}
+                            {/* <a target="_target" rel="noopener noreferrer" href="https://www.facebook.com/RPGStock"><img src={FacebookIcon} alt="Facebook icon" width="auto" height="25px"/></a>
+                            <a target="_target" rel="noopener noreferrer" href="#"><img src={TwitterIcon} alt="Twitter icon" width="auto" height="25px"/></a>
+                            <a target="_target" rel="noopener noreferrer" href="http://sythe.org/register.php?do=register&r=741875"><img src={SytheLogo} alt="SytheLogo" width="auto" height="25px"/></a> */}
                         </p>
                 </Row>
             </Container>

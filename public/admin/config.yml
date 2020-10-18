@@ -13,6 +13,21 @@ collections:
       fields: 
         - { label: 'Header Image', name: "headerimage", widget: 'image'}
         - { label: 'Alt Text', name: "alttext", widget: 'string'}
+  - name: "footercomponent"
+    label: "Footer Component"
+    files:
+    - label: "Footer Component"
+      name: "footercomponent"
+      file: "content/footercomponent.md"
+      fields:
+        - { label: "Text", name: "text", widget: "string"}
+        - label: "icons"
+          name: "icons"
+          widget: list
+          fields:
+            - { label: "Icon Picture", name: "picture", widget: "image"}
+            - { label: "Alt Text", name: "alttext", widget: "string"}
+            - { label: "Link (URL)", name: "url", widget: "string"}
   - name: "generalinfocomponent"
     label: "General Information Component"
     files:

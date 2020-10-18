@@ -44,8 +44,6 @@ const {osrsrate, rs3rate} = attributes;
                 </Col>
             </Row>
         </Container>
-
-        {/* <!-- Body --> */}
         <Showcase />
 
     </div>

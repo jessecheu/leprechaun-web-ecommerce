@@ -1,6 +1,5 @@
 import React from 'react'
 import * as ReactBootStrap from "react-bootstrap";
-import RPGStockLogo from '../../assets/RPGStock-logo.png';
 
 import {attributes} from '../../content/logocomponent.md'
 

@@ -1,10 +1,4 @@
 import React from 'react'
-const SearchyName = require('../../assets/userreviews/searchy-name.png');
-const SearchyDonorRank = require('../../assets/userreviews/searchy-donorrank.png');
-const QBDName = require('../../assets/userreviews/qbd-name.png');
-const QBDDonorRank = require('../../assets/userreviews/qbd-donorrank.png');
-const AssassinName = require('../../assets/userreviews/assassin-name.png');
-const AssassinDonorRank = require('../../assets/userreviews/assassin-donorrank.png');
 
 import { Container, Row, Col, Card } from 'react-bootstrap'
 

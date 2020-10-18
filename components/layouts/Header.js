@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import RPGStocklogo from "../../assets/RPGStock-logo.png";
 
 import { getToken, clearToken } from "../../utils";
 
