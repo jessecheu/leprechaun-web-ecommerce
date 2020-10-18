@@ -45,6 +45,43 @@ reviews:
       gold, it was quick and easy. I used paypal.
     name: virus Armor
     publishdate: 'June 21, 2020'
+  - category: TrustPilot
+    id: '7'
+    link: 'https://www.trustpilot.com/reviews/5ef048eb7dd7530324727031'
+    message: >-
+      Rolled onto rpgstock and purchased 300M via crypto, thank you. fast and
+      easy!!
+    name: Hallow Tree
+    publishdate: 'June 21, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '8'
+    link: 'https://www.trustpilot.com/reviews/5ef910fd7dd7530324785e15'
+    message: 'Excellent customer service, I bought a rp giftcard using paypal.'
+    name: LOLPker
+    publishdate: 'June 28, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '9'
+    link: 'https://www.trustpilot.com/reviews/5efa3f327dd7530324793cda'
+    message: "my favorite person who i sell to.\r\n\nAlways quick and trustworthy.\r\n\nhes my go to.\r\n\n\\- Diana"
+    name: Diana McFarland
+    publishdate: 'June 29, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '10'
+    link: 'https://www.trustpilot.com/reviews/5efa747e7dd75306b8d0fa39'
+    message: >-
+      Nothing But The Best
+
+
+      Always Fast, Always Competive pricing, Always my first Choice for osrs
+      gold.
+    name: Joseph Hutton
+    publishdate: 'June 29, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '11'
+    link: 'https://www.trustpilot.com/reviews/5efaa5fc7dd75306b8d10720'
+    message: "Bought a $25 RP Card from Them, Great Website and Customer Services.. Would Highly Recommend!\r\n\n\r\n\n100/10!!!!"
+    name: Brennan Davis
+    publishdate: 'June 29, 2020 12:00 AM'
   - category: Sythe
     id: '0.01'
     link: 'https://www.sythe.org/posts/30491576/'
@@ -65,5 +102,37 @@ reviews:
       months. Always friendly and easy to deal with, much appreciated!
     name: Searchy
     publishdate: 'May 6, 2018 3:40 PM'
+  - category: TrustPilot
+    id: '12'
+    link: 'https://www.trustpilot.com/reviews/5efd43c43f06f20a94d654f2'
+    message: >-
+      Very fast and reliable. Sold him hundreds of mils and have had no issues.
+      Would recommend to anyone interesting RS GP.
+    name: S H
+    publishdate: 'July 1, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '13'
+    link: 'https://www.trustpilot.com/reviews/5f0e0cd53f06f20bb4b1719e'
+    message: 'Fast, well executed'
+    name: Josean Combina
+    publishdate: 'July 14, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '14'
+    link: 'https://www.trustpilot.com/reviews/5f10aa953f06f2088c67cb74'
+    message: fast reliable and easy
+    name: Mario Lepri
+    publishdate: 'July 16, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '15'
+    link: 'https://www.trustpilot.com/reviews/5f138b313f06f208b4eebf4e'
+    message: 'Bought 1b, quick and trusted. Will buy again.'
+    name: nate brown
+    publishdate: 'July 18, 2020 12:00 AM'
+  - category: TrustPilot
+    id: '16'
+    link: 'https://www.trustpilot.com/reviews/5f1650ac3f06f2061435b33c'
+    message: super fast to add me and quicky traded me money after i sent!
+    name: Ryan
+    publishdate: 'July 20, 2020 12:00 AM'
 ---
 
