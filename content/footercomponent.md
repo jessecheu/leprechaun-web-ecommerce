@@ -13,5 +13,28 @@ icons:
   - alttext: Trust Pilot Icon
     picture: /img/trustpilot-icon.png
     url: 'https://www.trustpilot.com/review/rpgstock.com'
+Sections:
+  - sectiontitle: RPGStock
+    subsection:
+      - subsectiontitle: About Us
+        subsectionurl: /
+      - subsectiontitle: Blog
+        subsectionurl: /
+      - subsectiontitle: Feedback
+        subsectionurl: /feedback
+  - sectiontitle: Support
+    subsection:
+      - subsectiontitle: Help Center
+        subsectionurl: /
+      - subsectiontitle: Payment Methods
+        subsectionurl: /paymentmethods
+      - subsectiontitle: Contact Us
+        subsectionurl: /
+  - sectiontitle: Legal
+    subsection:
+      - subsectiontitle: Terms of Service
+        subsectionurl: /terms-of-service
+      - subsectiontitle: Privacy Policy
+        subsectionurl: /privacy-policy
 ---
 
