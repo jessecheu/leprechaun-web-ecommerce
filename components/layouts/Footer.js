@@ -57,8 +57,8 @@ const Footer = () => {
                 <hr />
                 <Row className="text-center">
                         <p  className="col-sm"> &copy; 2017 - {new Date().getFullYear()} {text}
-                            {icons.map((icon)=> (
-                                <a target="_target" rel="noopener noreferrer" href="https://www.facebook.com/RPGStock"><img src={FacebookIcon} alt="Facebook icon" width="auto" height="25px"/></a>
+                            {icons && ficons.map((icon)=> (
+                                <a target="_target" rel="noopener noreferrer" href={icon.url}><img src={icon.picture} alt={icon.alttext} width="auto" height="25px"/></a>
                             ))}
                             {/* <a target="_target" rel="noopener noreferrer" href="https://www.facebook.com/RPGStock"><img src={FacebookIcon} alt="Facebook icon" width="auto" height="25px"/></a>
                             <a target="_target" rel="noopener noreferrer" href="#"><img src={TwitterIcon} alt="Twitter icon" width="auto" height="25px"/></a>
