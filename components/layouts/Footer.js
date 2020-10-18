@@ -57,12 +57,9 @@ const Footer = () => {
                 <hr />
                 <Row className="text-center">
                         <p  className="col-sm"> &copy; 2017 - {new Date().getFullYear()} {text}
-                            {icons && ficons.map((icon)=> (
-                                <a target="_target" rel="noopener noreferrer" href={icon.url}><img src={icon.picture} alt={icon.alttext} width="auto" height="25px"/></a>
+                            {icons && icons.map((icon, k)=> (
+                                <a key={k} target="_target" rel="noopener noreferrer" href={icon.url}><img src={icon.picture} alt={icon.alttext} width="auto" height="25px"/></a>
                             ))}
-                            {/* <a target="_target" rel="noopener noreferrer" href="https://www.facebook.com/RPGStock"><img src={FacebookIcon} alt="Facebook icon" width="auto" height="25px"/></a>
-                            <a target="_target" rel="noopener noreferrer" href="#"><img src={TwitterIcon} alt="Twitter icon" width="auto" height="25px"/></a>
-                            <a target="_target" rel="noopener noreferrer" href="http://sythe.org/register.php?do=register&r=741875"><img src={SytheLogo} alt="SytheLogo" width="auto" height="25px"/></a> */}
                         </p>
                 </Row>
             </Container>

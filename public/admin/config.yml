@@ -28,6 +28,17 @@ collections:
             - { label: "Icon Picture", name: "picture", widget: "image"}
             - { label: "Alt Text", name: "alttext", widget: "string"}
             - { label: "Link (URL)", name: "url", widget: "string"}
+        - label: "Sections"
+          name: "Sections"
+          widget: list
+          fields: 
+            - { label: "Section Title", name: "sectiontitle", widget: "string"}
+            - label: "Sub Sections"
+              name: "subsection"
+              widget: list
+              fields:
+                - { label: "Sub Section Title", name: "subsectiontitle", widget: "string"}
+                - { label: "Sub Section URL", name: "subsectionurl", widget: "string"}
   - name: "generalinfocomponent"
     label: "General Information Component"
     files:
