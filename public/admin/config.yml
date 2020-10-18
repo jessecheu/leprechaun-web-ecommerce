@@ -43,13 +43,8 @@ collections:
           name: "imagesection"
           widget: list
           fields: 
-            - { label: "title", name: "title", widget: "string"}
-            - label: "Images"
-              name: "images"
-              widget: list
-              fields: 
-                - { label: "Image", name: "image", widget: "image"}
-                - { label: "Alt Text", name: "alttext", widget: "string"}
+            - { label: "Image", name: "image", widget: "image"}
+            - { label: "Alt Text", name: "alttext", widget: "string"}
   - name: "generalinfocomponent"
     label: "General Information Component"
     files:
