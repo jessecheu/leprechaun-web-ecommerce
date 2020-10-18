@@ -9,7 +9,7 @@ import { Container, Row, Col} from 'react-bootstrap';
 import { attributes } from '../../content/footercomponent.md'
 
 const Footer = () => {
-    const { text, icons, Sections, imagesection } = attributes;
+    const { text, icons, Sections, imagesectiontitle, imagesection } = attributes;
     return(
         <div className="main-footer" style={{padding: '4px', paddingTop: '0px', backgroundColor: 'white'}}>
             <Container>
@@ -29,11 +29,11 @@ const Footer = () => {
                     }
                     <Col md={3}>
 
-                        <h4>Payment Methods</h4>
+                        <h4>{imagesectiontitle}</h4>
                         {imagesection &&
                             imagesection.map((imagesection, k) => (
                                 <li className="list-unstyled">
-                                    <img src={imagesection.images.image} alt={imagesection.images.alttext} width="80px" height="40px"/>
+                                    <img src={imagesection.image} alt={imagesection.alttext} width="80px" height="40px"/>
                                 </li>
                             ))
                         }

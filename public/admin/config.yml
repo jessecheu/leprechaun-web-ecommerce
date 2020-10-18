@@ -39,6 +39,7 @@ collections:
               fields:
                 - { label: "Sub Section Title", name: "subsectiontitle", widget: "string"}
                 - { label: "Sub Section URL", name: "subsectionurl", widget: "string"}
+        - { label: "Image Section Title", name: "imagesectiontitle", widget: "string"}
         - label: "Image Section"
           name: "imagesection"
           widget: list
