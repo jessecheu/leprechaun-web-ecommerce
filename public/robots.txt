@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://www.example.com/sitemap.xml
+Sitemap: http://www.rpgstock.com/sitemap.xml
