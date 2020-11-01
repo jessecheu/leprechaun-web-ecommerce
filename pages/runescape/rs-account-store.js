@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import axios from 'axios'
 
 import {Container, Row, CardGroup, Alert} from 'react-bootstrap'
@@ -50,10 +50,10 @@ class AccountStore extends Component {
 
         return (
             <div className="container">
-            <Helmet>
+            <Head>
                 <title>RPGStock | Runescape Account Store</title>
                 <meta name="description" content="About RPGStock, The place to buy handmade runescape accounts" />
-            </Helmet>
+            </Head>
                 <h1>Runescape Accounts</h1>
                 < hr/>
                 <SearchBox handleSearchInput={this.handleSearchInput} placeholder={"Search for an account..."}/>

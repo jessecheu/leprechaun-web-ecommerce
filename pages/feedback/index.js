@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Tabs, Tab, Table, Nav} from 'react-bootstrap';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import ReviewCard from './ReviewCard'
 import { attributes } from '../../content/reviews.md';
 import TrustPilot from '../../assets/trustpilot-icon.png';
@@ -22,10 +22,10 @@ class Feedback extends React.Component {
         const sortedMiscReviews = miscreviews.sort((a, b) => b.id - a.id)
     return (
         <div>
-        <Helmet>
+        <Head>
             <title>RPGStock | Feedback and Reviews</title>
             <meta name="description" content="RPGStock reputation, feedback, and reviews." />
-        </Helmet>
+        </Head>
             <Container>
                 <Row className="justify-content-center">
                     <h1>Feedback and Reviews </h1>

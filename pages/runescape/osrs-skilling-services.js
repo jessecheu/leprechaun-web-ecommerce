@@ -1,14 +1,14 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import {Container, Row, Col, Button} from 'react-bootstrap'
 
 function RSSkillingPage(props) {
     return (
         <div>
-        <Helmet>
+        <Head>
             <title>RPGStock | Runescape Account Services</title>
             <meta name="description" content="RPGStock Old School Runescape Quest Service" />
-        </Helmet>
+        </Head>
         <Container className="my-container">
             <h1>Skilling</h1>
             <Row>

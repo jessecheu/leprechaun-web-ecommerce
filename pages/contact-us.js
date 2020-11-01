@@ -1,16 +1,16 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import { Container,Row, Col } from 'react-bootstrap';
 import EmailContactForm from './General/EmailContactForm';
 
 function Contact() {
     return (
         <div>
-        <Helmet>
+        <Head>
             <title>RPGStock | Contact</title>
             <meta name="description" content="Contact RPGStock Adminsitrators with Email" />
             {/* <!-- Begin Mailchimp Signup Form --> */}
-        </Helmet>
+        </Head>
         <center><h1> Contact US </h1></center>
         < hr />
         <Container>

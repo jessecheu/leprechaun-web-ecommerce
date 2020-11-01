@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import {Container, Row, Col, Button, Table} from 'react-bootstrap'
 
 import SearchBox from '../../components/ExtraComponents/SearchBox'
@@ -36,10 +36,10 @@ let mockData = [
 function RSServicePage(props) {
     return (
         <div>
-        <Helmet>
+        <Head>
             <title>RPGStock | Runescape Account Services</title>
             <meta name="description" content="RPGStock Old School Runescape Quest Service" />
-        </Helmet>
+        </Head>
         <Container className="my-container">
             <h1>Old School Runescape Questing</h1>
             <SearchBox placeholder={"Search for a Quest..."}/>

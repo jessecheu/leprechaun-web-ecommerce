@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Helmet} from 'react-helmet';
+import Head from 'next/head';
 import { Container, Row, Alert} from 'react-bootstrap';
 
 import GiftcardProductCard from './GiftcardProductCard'
@@ -34,10 +34,10 @@ class VGGiftCard extends React.Component{
         
         return(
         <div className="VGGiftcard">
-            <Helmet>
+            <Head>
                 <title>RPGStock | Purchase Video game giftcards</title>
                 <meta name="description" content="Purchase video game giftcards such as League of legend's Riot Point, PSN, XBox, and Apex Legends" />
-            </Helmet>
+            </Head>
             <div style={{textAlign: 'center'}}>
                 <h1>Video Game Giftcards</h1>
                 <h2>We are currently offering {fetchedDiscountValue}% discount of the giftcard value</h2>

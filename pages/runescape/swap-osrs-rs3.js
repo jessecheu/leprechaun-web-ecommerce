@@ -1,4 +1,6 @@
 import React from 'react'
+import Head from 'next/head';
+
 import {Container, Row, Col, Card, Button, Form, InputGroup} from 'react-bootstrap'
 import util from "../../components/ExtraComponents/util"
 
@@ -7,6 +9,7 @@ import HowToBegin from '../../components/layouts/HowToBegin.js';
 import RWTInformation from '../../components/layouts/RWTInformation';
 
 import { attributes, react as Content } from '../../content/pricingandrates.md';
+
 
 const initialState = {
     rate: "",
@@ -98,6 +101,10 @@ class swaposrsrs3 extends React.Component {
 
         return(
             <div>
+                <Head>
+                    <title>RPGStock | SWAP OSRS To RS3</title>
+                    <meta name="description" content="RPGStock | SWAP Old School Runescape Gold (07 GP) To Runescape 3 Gold (RS3 GP)" />
+                </Head>
                 <Container>
                     <Row className="justify-content-center">
                         <Card style={{width: '50%', textAlign: 'center'}}>

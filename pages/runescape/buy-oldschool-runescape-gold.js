@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
 import GeneralInformation from '../../components/layouts/GeneralInformation';
@@ -22,10 +22,10 @@ function BuyOSRS() {
             </div>
         ) : (
             <>
-            <Helmet>
+            <Head>
                 <title>RPGStock | Purchase Old School Runescape Gold</title>
                 <meta name="description" content="Purchase Old School Runescape Gold at the cheapest rate possible!" />
-            </Helmet>
+            </Head>
             <h1 style={{textAlign: 'center'}}>Buy Old School Runescape Gold</h1>
             < hr/>
             <Container>

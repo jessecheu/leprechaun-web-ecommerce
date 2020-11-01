@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import { Container, Row, Col } from 'react-bootstrap';
 import ScroogeMcDuck from '../../assets/scroogemcduck.png';
 import SytheProfile from '../../assets/marketprofiles/sytheprofile.png';
@@ -9,10 +9,10 @@ import SytheProfile from '../../assets/marketprofiles/sytheprofile.png';
 function aboutus() {
     return (
         <div className="aboutus-main">
-        <Helmet>
+        <Head>
             <title>RPGStock | About US</title>
             <meta name="description" content="About RPGStock, The place to buy and sell runescape" />
-        </Helmet>
+        </Head>
             <div style={{textAlign: 'center'}}>
                 <br/>
                 <br/>

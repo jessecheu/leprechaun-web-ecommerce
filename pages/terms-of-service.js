@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import Timestamp from 'react-timestamp'
 import { Container} from 'react-bootstrap';
 
@@ -13,10 +13,10 @@ class termsofservice extends React.Component {
 
     return (
         <div>
-            <Helmet>
+            <Head>
                 <title>RPGStock | Terms of Service</title>
                 <meta name="description" content="RPGStock Terms of Service" />
-            </Helmet>
+            </Head>
             <Container>
                 <div style={{textAlign: 'center'}}>
                     <h1>{ title }</h1>

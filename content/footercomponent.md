@@ -27,7 +27,7 @@ Sections:
       - subsectiontitle: Help Center
         subsectionurl: /
       - subsectiontitle: Payment Methods
-        subsectionurl: /paymentmethods
+        subsectionurl: /payment-methods
       - subsectiontitle: Contact Us
         subsectionurl: /
   - sectiontitle: Legal

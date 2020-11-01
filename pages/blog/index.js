@@ -1,14 +1,14 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 
 function Blog() {
     return (
         <div>
-        <Helmet>
+        <Head>
             <title>RPGStock | Blog</title>
             <meta name="description" content="RPGStock Blog | Learn all things video game market" />
-        </Helmet>
+        </Head>
             <h1>RPGStock's Blog</h1>
         </div>
     )

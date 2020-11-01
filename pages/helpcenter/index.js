@@ -1,6 +1,6 @@
 import React from 'react'
 import {Container, Row, Col} from 'react-bootstrap'
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 import Link from 'next/link'
 
 import SearchBox from '../../components/ExtraComponents/SearchBox'
@@ -10,10 +10,10 @@ import Post from './Post'
 function HelpCenter() {
     return (
         <div>
-            <Helmet>
+            <Head>
                 <title>RPGStock | Help Center</title>
                 <meta name="description" content="RPGStock Help Center and frequently asked questions" />
-            </Helmet>
+            </Head>
             <Container className="left-positioned-text">
                 <br />
                 <SearchBox placeholder="How can we help you?"/>

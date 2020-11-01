@@ -2,7 +2,7 @@
 
 const Sitemap = configureSitemap({
   baseUrl: 'https://rpgstock.com',
-  exclude: ['/public/admin/*'],
+  exclude: ['/public/admin/*', '/public/admin', '/admin/*'],
   excludeIndex: true,
   pagesConfig: {
     '/pages/*': {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import GeneralInformation from '../../components/layouts/GeneralInformation';
 import HowToBegin from '../../components/layouts/HowToBegin.js';
@@ -8,10 +8,10 @@ import RWTInformation from '../../components/layouts/RWTInformation';
 function sellosrs() {
     return (
         <div>
-        <Helmet>
+        <Head>
             <title>RPGStock | Sell Old School Runescape Gold</title>
             <meta name="description" content="Sell Old School Runescape Gold at the best rate possible!" />
-        </Helmet>
+        </Head>
         <div style={{textAlign: 'center'}}>
             <h1>Sell Old School Runescape Gold</h1>
             < hr/>

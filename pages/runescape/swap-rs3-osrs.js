@@ -1,5 +1,7 @@
 import React from 'react'
-import axios from 'axios'
+
+import Head from 'next/head';
+
 import {Container, Row, Col, Card, Button, Form, InputGroup} from 'react-bootstrap'
 import util from "../../components/ExtraComponents/util"
 
@@ -90,11 +92,6 @@ class swaprs3osrs extends React.Component {
 
     async componentDidMount(){
 
-        const rateRes = await axios({
-            method: 'GET',
-            url: `${apiURL}/rsgp-price`
-        })
-
         const {rs3toosrsswap} = attributes;
 
         this.setState({
@@ -109,6 +106,10 @@ class swaprs3osrs extends React.Component {
 
         return(
             <div>
+                <Head>
+                    <title>RPGStock | SWAP RS3 To OSRS</title>
+                    <meta name="description" content="RPGStock | SWAP Runescape 3 Gold (RS3 GP) To Old School Runescape Gold (07 GP) " />
+                </Head>
                 <Container>
                     <Row className="justify-content-center">
                         <Card style={{width: '50%', textAlign: 'center'}}>

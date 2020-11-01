@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Head from 'next/head';
+
 import HowToBegin from '../components/layouts/HowToBegin';
 import GeneralInformation from '../components/layouts/GeneralInformation';
 
@@ -20,6 +23,10 @@ const {osrsrate, rs3rate} = attributes;
   return (
 
     <div className="App">
+        <Head>
+            <title>RPGStock | Home</title>
+            <meta name="description" content="RPGStock Home Page / Purchase Runescape Gold Here!" />
+        </Head>
 
         {/* <!-- Quick-start- Container --> */}
         <Container className="quickStartContainer">

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Helmet from 'react-helmet'
+import Head from 'next/head'
 import { Container} from 'react-bootstrap';
 import Timestamp from 'react-timestamp'
 
@@ -13,10 +13,10 @@ class Privacy extends React.Component {
         const { title, date } = attributes;
         return (
             <div>
-                <Helmet>
+                <Head>
                     <title>RPGStock | Privacy Page</title>
                     <meta name="description" content="RPGStock Privacy Policy" />
-                </Helmet>
+                </Head>
                 <Container>
                 <div style={{textAlign: 'center'}}>
                     <h1>{title}</h1>

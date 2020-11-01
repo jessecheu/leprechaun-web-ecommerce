@@ -1,15 +1,15 @@
 import React from 'react'
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import {Container, Row, Col, Button} from 'react-bootstrap'
 
 
 function RSMinigamePage(props) {
     return (
         <div>
-        <Helmet>
+        <Head>
             <title>RPGStock | Runescape Account Services</title>
             <meta name="description" content="RPGStock Old School Runescape Minigame Service" />
-        </Helmet>
+        </Head>
         <Container className="my-container">
             <h1>Minigame</h1>
             <Row>
