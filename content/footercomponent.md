@@ -29,7 +29,7 @@ Sections:
       - subsectiontitle: Payment Methods
         subsectionurl: /payment-methods
       - subsectiontitle: Contact Us
-        subsectionurl: /
+        subsectionurl: /contact
   - sectiontitle: Legal
     subsection:
       - subsectiontitle: Terms of Service
