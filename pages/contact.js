@@ -90,7 +90,8 @@ function Contact() {
         < hr />
         <Container>
         {!success &&
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} method="post" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+                <input type="hidden" name="form-name" value="contact" />  
                 <Row className="justify-content-center" style={{paddingBottom: '30px'}}>
                     <Col md={6}>
                         <div className="singleItem">
@@ -114,7 +115,7 @@ function Contact() {
                         {/* {Single Item} */}
                         <div className="singleItem">
                             <input 
-                                type="text"
+                                type="email"
                                 id="email"
                                 name="email" 
                                 className="email" 
