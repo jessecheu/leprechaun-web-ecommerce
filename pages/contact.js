@@ -15,6 +15,8 @@ function Contact() {
     const [messageError, setMessageError ] = useState({});
 
     const [success, setSuccess ] = useState("");
+
+    const formValues = {name, email, subject, message};
  
     const formValidation = () => {
         const nameError = {};
@@ -61,7 +63,7 @@ function Contact() {
         e.preventDefault();
         const isValid = formValidation();
         if(isValid){
-        const fullstate = {name, email, subject, message};
+        console.log("formvalues", formValues)
             setName("");
             setEmail("");
             setSubject("");
@@ -69,7 +71,7 @@ function Contact() {
             fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact", fullstate })
+                body: encode({ "form-name": "contact", formValues })
             })
                 .then(() => setSuccess("Submission was a success"))
                 .catch(error => alert(error));
@@ -88,7 +90,7 @@ function Contact() {
         < hr />
         <Container>
         {!success &&
-            <form onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+            <form onSubmit={handleSubmit}>
                 <Row className="justify-content-center" style={{paddingBottom: '30px'}}>
                     <Col md={6}>
                         <div className="singleItem">
