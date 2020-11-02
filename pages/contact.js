@@ -88,7 +88,7 @@ function Contact() {
         < hr />
         <Container>
         {!success &&
-            <form onSubmit={handleSubmit} method="POST" data-netlify="true" name="contact" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+            <form onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
                 <Row className="justify-content-center" style={{paddingBottom: '30px'}}>
                     <Col md={6}>
                         <div className="singleItem">
