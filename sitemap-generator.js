@@ -1,4 +1,4 @@
-  const { configureSitemap } = require('@sergeymyssak/nextjs-sitemap');
+const { configureSitemap } = require('@sergeymyssak/nextjs-sitemap');
 
 const Sitemap = configureSitemap({
   baseUrl: 'https://rpgstock.com',
