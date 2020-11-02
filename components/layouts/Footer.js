@@ -2,8 +2,6 @@ import React from 'react';
 import { Container, Row, Col} from 'react-bootstrap';
 import { attributes } from '../../content/footercomponent.md'
 
-import BitcoinIcon from '../../assets/icons/bitcoin-icon.png'
-
 const Footer = () => {
     const { text, icons, Sections, imagesectiontitle, imagesection, visualicons } = attributes;
     return(
@@ -12,7 +10,7 @@ const Footer = () => {
                 <Row>
                     {Sections && 
                         Sections.map((section,k) => (
-                            <Col md={3}>
+                            <Col md={3} key={k}>
                             <h4>{section.sectiontitle}</h4>
                             <ul className="list-unstyled">
                                 {section && section.subsection.map((subsection) =>(
@@ -37,8 +35,8 @@ const Footer = () => {
                 <hr />
                 <Row className="justify-content-center">
                     {visualicons &&
-                        visualicons.map((singleicon) => (
-                            <a href="/paymentmethods"><img src={singleicon.icons} alt={singleicon.alttext} height="30px" width="30px"/></a>
+                        visualicons.map((singleicon, k) => (
+                            <a key={k} href="/paymentmethods"><img src={singleicon.icons} alt={singleicon.alttext} height="30px" width="30px"/></a>
                         ))
                     }        
                 </Row>
