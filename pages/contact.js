@@ -71,7 +71,7 @@ function Contact() {
             fetch("/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact", formValues })
+                body: encode({ "form-name": "contact", "name": name, "email": email, "subject": subject, "message": message })
             })
                 .then(() => setSuccess("Submission was a success"))
                 .catch(error => alert(error));
@@ -90,7 +90,7 @@ function Contact() {
         < hr />
         <Container>
         {!success &&
-            <form onSubmit={handleSubmit} method="post" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+            <form onSubmit={handleSubmit} method="post" netlify data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
                 <input type="hidden" name="form-name" value="contact" />  
                 <Row className="justify-content-center" style={{paddingBottom: '30px'}}>
                     <Col md={6}>
