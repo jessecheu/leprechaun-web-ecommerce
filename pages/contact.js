@@ -1,6 +1,7 @@
 import React, { Component, useState }  from 'react'
 import Head from 'next/head';
 import { Container,Row, Col } from 'react-bootstrap';
+import validator from 'validator'
 
 function Contact() {
     const [name, setName] = useState("");
@@ -27,7 +28,7 @@ function Contact() {
             isValid = false;
         }
 
-        if(email.trim().length <= 0){
+        if(email.trim().length <= 0 || !validator.isEmail(email)){
             emailError.emailShort = "*Please input a valid email*"
             isValid = false;
         }
@@ -50,16 +51,30 @@ function Contact() {
         return isValid;
     }
 
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const isValid = formValidation();
         if(isValid){
+        const fullstate = {name, email, subject, message};
             setName("");
             setEmail("");
             setSubject("");
             setMessage("");
-            setSuccess("Submission was a success");
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "contact", fullstate })
+            })
+                .then(() => setSuccess("Submission was a success"))
+                .catch(error => alert(error));
         }
+
 
     }
 
@@ -73,7 +88,7 @@ function Contact() {
         < hr />
         <Container>
         {!success &&
-            <form onSubmit={handleSubmit} method="POST" data-netlify="true" name="contact" data-netlify-honeypot="bot-field">
+            <form onSubmit={handleSubmit} method="POST" data-netlify="true" name="contact" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true">
                 <Row className="justify-content-center" style={{paddingBottom: '30px'}}>
                     <Col md={6}>
                         <div className="singleItem">
@@ -154,6 +169,9 @@ function Contact() {
                         })}
                         {/* End Single Item */}
                     </Col>
+                </Row>
+                <Row className="justify-content-center">
+                    <div data-netlify-recaptcha="true"></div>
                 </Row>
                 <Row className="justify-content-center">
                     <div className="btn">
