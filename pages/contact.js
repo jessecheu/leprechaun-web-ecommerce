@@ -15,8 +15,6 @@ function Contact() {
     const [messageError, setMessageError ] = useState({});
 
     const [success, setSuccess ] = useState("");
-
-    const formValues = {name, email, subject, message};
  
     const formValidation = () => {
         const nameError = {};
@@ -63,15 +61,14 @@ function Contact() {
         e.preventDefault();
         const isValid = formValidation();
         if(isValid){
-        console.log("formvalues", formValues)
             setName("");
             setEmail("");
             setSubject("");
             setMessage("");
-            fetch("/contact", {
+            fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact", "name": name, "email": email, "subject": subject, "message": message })
+                body: encode({ "form-name": "contact", "name": {name, "email": email, "subject": subject, "message": message} })
             })
                 .then(() => setSuccess("Submission was a success"))
                 .catch(error => alert(error));
