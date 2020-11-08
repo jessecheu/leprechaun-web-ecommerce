@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Tabs, Tab, Table, Nav} from 'react-bootstrap';
 import Head from 'next/head';
-import ReviewCard from '../../components/extracomponents/ReviewCard'
+import ReviewCard from '../../components/ExtraComponents/ReviewCard'
 import { attributes } from '../../content/reviews.md';
 import TrustPilot from '../../assets/trustpilot-icon.png';
 import SytheHeader from '../../assets/sytheheader.png'

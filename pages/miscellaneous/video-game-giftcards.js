@@ -3,7 +3,7 @@ import React from 'react'
 import Head from 'next/head';
 import { Container, Row, Alert} from 'react-bootstrap';
 
-import GiftcardProductCard from '../../components/extracomponents/GiftcardProductCard'
+import GiftcardProductCard from '../../components/ExtraComponents/GiftcardProductCard'
 
 import { attributes } from '../../content/videogamegiftcards.md';
 

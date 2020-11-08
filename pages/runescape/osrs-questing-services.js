@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head';
 import {Container, Row, Col, Button, Table} from 'react-bootstrap'
 
-import SearchBox from '../../components/extracomponents/SearchBox'
+import SearchBox from '../../components/ExtraComponents/SearchBox'
 
 
 let mockData = [
