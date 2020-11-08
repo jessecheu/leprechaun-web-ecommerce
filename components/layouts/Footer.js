@@ -41,12 +41,17 @@ const Footer = () => {
                     }        
                 </Row>
                 <hr />
+                <Row>
+                    <p style={{color: 'white'}}>
+                        This website was developed by <a style={{color: 'white', display: 'inline-block', pointerEvents: 'none' }} href="https://invertedsilo.com" target="__blank">Inverted Silo Solutions</a>
+                    </p>
+                </Row>
                 <Row className="text-center">
-                        <p  className="col-sm"> &copy; 2017 - {new Date().getFullYear()} {text}
-                            {icons && icons.map((icon, k)=> (
-                                <a key={k} target="_target" rel="noopener noreferrer" href={icon.url}><img src={icon.picture} alt={icon.alttext} width="auto" height="25px"/></a>
-                            ))}
-                        </p>
+                    <p  className="col-sm"> &copy; 2017 - {new Date().getFullYear()} {text}
+                        {icons && icons.map((icon, k)=> (
+                            <a key={k} target="_target" rel="noopener noreferrer" href={icon.url}><img src={icon.picture} alt={icon.alttext} width="auto" height="25px"/></a>
+                        ))}
+                    </p>
                 </Row>
             </Container>
         </div>
