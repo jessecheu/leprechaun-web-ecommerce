@@ -1,5 +1,5 @@
 import React from 'react'
-import util from '.../../../components/ExtraComponents/util';
+import util from '../util';
 
 
 import { Button } from 'react-bootstrap';

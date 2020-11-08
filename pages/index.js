@@ -5,7 +5,7 @@ import Head from 'next/head';
 import HowToBegin from '../components/layouts/HowToBegin';
 import GeneralInformation from '../components/layouts/GeneralInformation';
 
-import RSGPBox from '../components/ExtraComponents/RSGPBox'
+import RSGPBox from '../components/extracomponents/RSGPBox'
 import OSRSLogo from '../assets/osrs-logo.png'
 import RS3Logo from '../assets/rs3-logo.png'
 

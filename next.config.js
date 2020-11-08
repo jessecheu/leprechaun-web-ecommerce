@@ -1,7 +1,6 @@
 const withPlugins = require("next-compose-plugins");
 const withImages = require('next-images')
 const { configureSitemap } = require('@sergeymyssak/nextjs-sitemap');
-
 const nextConfig = {
     webpack: (cfg) => {
         cfg.module.rules.push(
@@ -29,9 +28,8 @@ const Sitemap = configureSitemap({
     targetDirectory: __dirname + '/public',
     pagesDirectory: __dirname + '/pages',
   });
-Sitemap.generateSitemap();
 
 
 module.exports = withPlugins([
-    [withImages],
-], nextConfig);
+    [withImages], 
+], nextConfig, Sitemap.generateSitemap());

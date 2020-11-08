@@ -13,8 +13,8 @@ const Footer = () => {
                             <Col md={3} key={k}>
                             <h4>{section.sectiontitle}</h4>
                             <ul className="list-unstyled">
-                                {section && section.subsection.map((subsection) =>(
-                                    <li><a href={subsection.subsectionurl}>{subsection.subsectiontitle}</a></li>
+                                {section && section.subsection.map((subsection, k) =>(
+                                    <li><a key={k} href={subsection.subsectionurl}>{subsection.subsectiontitle}</a></li>
                                 ))
                                 }
                             </ul>

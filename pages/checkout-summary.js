@@ -1,7 +1,7 @@
 import React from 'react'
 import { UserContext } from '../utils/UserContext'
 import {Container, Row, Col, Button,ButtonGroup, Card} from 'react-bootstrap'
-import util from "../components/ExtraComponents/util.js"
+import util from "../components/extracomponents/util.js"
 
 import Router from 'next/router'
 
@@ -15,7 +15,7 @@ import VenmoIcon from '../assets/icons/venmo-icon.png'
 import ZelleIcon from '../assets/icons/zelle-icon.png';
 import RevolutIcon from '../assets/icons/revolut-icon.png';
 
-import PaymentMethodModal from '../components/ExtraComponents/PaymentMethodModal'
+import PaymentMethodModal from '../components/extracomponents/PaymentMethodModal'
 
 
 
