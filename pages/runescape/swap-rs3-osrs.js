@@ -3,13 +3,11 @@ import React from 'react'
 import Head from 'next/head';
 
 import {Container, Row, Col, Card, Button, Form, InputGroup} from 'react-bootstrap'
-import util from "../../components/ExtraComponents/util"
+import util from "../../components/extracomponents/util"
 
 import GeneralInformation from '../../components/layouts/GeneralInformation';
 import HowToBegin from '../../components/layouts/HowToBegin.js';
 import RWTInformation from '../../components/layouts/RWTInformation';
-
-import { apiURL } from '../../utils/apiURL'
 
 import { attributes, react as Content } from '../../content/pricingandrates.md';
 

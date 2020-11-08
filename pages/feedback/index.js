@@ -1,10 +1,10 @@
 import React from 'react'
 import { Container, Row, Col, Tabs, Tab, Table, Nav} from 'react-bootstrap';
 import Head from 'next/head';
-import ReviewCard from './ReviewCard'
+import ReviewCard from '../../components/extracomponents/ReviewCard'
 import { attributes } from '../../content/reviews.md';
 import TrustPilot from '../../assets/trustpilot-icon.png';
-import SytheHeader from './sytheheader.png'
+import SytheHeader from '../../assets/sytheheader.png'
 
 
 class Feedback extends React.Component {
@@ -66,11 +66,12 @@ class Feedback extends React.Component {
                                     </thead>
                                     <tbody>
                                         {sortedTrustpilotReviews &&
-                                            sortedTrustpilotReviews.map((review) => {
+                                            sortedTrustpilotReviews.map((review, k) => {
                                                 if(review.category.toLowerCase() === ("trustpilot")){
-                                                   
+                                                    
                                                     return(
-                                                        <ReviewCard 
+                                                        <ReviewCard
+                                                            key={k} 
                                                             id={review.id} 
                                                             reviewName={review.name} 
                                                             message={review.message}
@@ -80,7 +81,7 @@ class Feedback extends React.Component {
                                                     />
                                                     )
                                                 }
-                                               return
+                                                return
                                             }, [])
                                         }
                                     </tbody>
@@ -101,14 +102,15 @@ class Feedback extends React.Component {
                                     <tbody>
                                         
                                         {sortedMiscReviews &&
-                                            sortedMiscReviews.map((review) => {
+                                            sortedMiscReviews.map((review, k) => {
                                                 if(review.category.toLowerCase() === ("misc") || 
                                                     review.category.toLowerCase() === ("sythe") ||
                                                     review.category.toLowerCase() === ("osbot") ||
                                                     review.category.toLowerCase() === ("epicnpc")
                                                 ){
                                                     return(
-                                                        <ReviewCard 
+                                                        <ReviewCard
+                                                            key={k} 
                                                             id={review.id} 
                                                             reviewName={review.name} 
                                                             message={review.message}

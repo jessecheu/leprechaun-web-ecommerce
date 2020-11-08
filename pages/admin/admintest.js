@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Container, Col, Row, Table, Button} from 'react-bootstrap'
-import SearchBox from '../../components/ExtraComponents/SearchBox'
+import SearchBox from '../../components/extracomponents/SearchBox'
 
 let mockData = [
     {

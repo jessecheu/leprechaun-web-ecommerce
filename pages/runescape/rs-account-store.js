@@ -4,8 +4,8 @@ import Head from 'next/head';
 import axios from 'axios'
 
 import {Container, Row, CardGroup, Alert} from 'react-bootstrap'
-import AccountsCard from '../../components/ExtraComponents/AccountStore/AccountsCard';
-import SearchBox from '../../components/ExtraComponents/SearchBox'
+import AccountsCard from '../../components/extracomponents/AccountStore/AccountsCard';
+import SearchBox from '../../components/extracomponents/SearchBox'
 
 import HowToBegin from '../../components/layouts/HowToBegin';
 

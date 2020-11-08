@@ -97,12 +97,7 @@ function aboutus() {
                                 </div>
                             </div>         
                     </div>
-                </div>
-            
-
-                
-
-                
+                </div>           
             </div>
         </div>
 

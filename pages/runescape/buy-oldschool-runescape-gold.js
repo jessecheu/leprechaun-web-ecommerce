@@ -5,7 +5,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import GeneralInformation from '../../components/layouts/GeneralInformation';
 import HowToBegin from '../../components/layouts/HowToBegin.js';
 import RWTInformation from '../../components/layouts/RWTInformation';
-import RSGPBox from '../../components/ExtraComponents/RSGPBox'
+import RSGPBox from '../../components/extracomponents/RSGPBox'
 import OSRSLogo from '../../assets/osrs-logo.png';
 
 import { attributes, react as Content } from '../../content/pricingandrates.md';

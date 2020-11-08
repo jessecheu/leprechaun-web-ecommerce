@@ -1,6 +1,6 @@
 import React from 'react'
 import {Modal, Button, Card, ListGroup, ListGroupItem} from 'react-bootstrap'
-import util from '../../../components/ExtraComponents/util';
+import util from '../util';
 
 import ReactMarkdown from 'react-markdown'
 

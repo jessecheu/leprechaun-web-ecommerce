@@ -3,9 +3,9 @@ import {Container, Row, Col} from 'react-bootstrap'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import SearchBox from '../../components/ExtraComponents/SearchBox'
+import SearchBox from '../../components/extracomponents/SearchBox'
 
-import Post from './Post'
+import Post from '../../components/archive/Post'
 
 function HelpCenter() {
     return (

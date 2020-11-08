@@ -5,7 +5,7 @@ import Head from 'next/head';
 import HowToBegin from '../components/layouts/HowToBegin';
 import GeneralInformation from '../components/layouts/GeneralInformation';
 
-import RSGPBox from '../components/ExtraComponents/RSGPBox'
+import RSGPBox from '../components/extracomponents/RSGPBox'
 import OSRSLogo from '../assets/osrs-logo.png'
 import RS3Logo from '../assets/rs3-logo.png'
 
@@ -24,8 +24,12 @@ const {osrsrate, rs3rate} = attributes;
 
     <div className="App">
         <Head>
-            <title>RPGStock | Home</title>
-            <meta name="description" content="RPGStock Home Page / Purchase Runescape Gold Here!" />
+            <title>RPGStock | Buy and Sell Runescape Gold with BTC/PayPal/Cashapp/Venmo/Revolut/ and many more!</title>
+            <meta name="description" content="RPGStock | 
+            Buy and Sell Runescape Gold with BTC/PayPal/Cashapp/Venmo/Revolut/ 
+            and many more! We sell and buy at the best rate possible with trained 
+            accounts to minimize risk! We also sell Video Game Giftcards such as 
+            Riot Points, Valorant, XBOX, PSN, Blizzard, WoW Gametime, and many others!" />
         </Head>
 
         {/* <!-- Quick-start- Container --> */}
