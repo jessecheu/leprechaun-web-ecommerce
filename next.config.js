@@ -28,8 +28,8 @@ const Sitemap = configureSitemap({
     targetDirectory: __dirname + '/public',
     pagesDirectory: __dirname + '/pages',
   });
-
+  Sitemap.generateSitemap()
 
 module.exports = withPlugins([
     [withImages], 
-], nextConfig, Sitemap.generateSitemap());
+], nextConfig);
