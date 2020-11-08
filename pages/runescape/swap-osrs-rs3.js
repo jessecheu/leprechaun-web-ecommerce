@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head';
 
 import {Container, Row, Col, Card, Button, Form, InputGroup} from 'react-bootstrap'
-import util from "../../components/extracomponents/util"
 
 import GeneralInformation from '../../components/layouts/GeneralInformation';
 import HowToBegin from '../../components/layouts/HowToBegin.js';
@@ -124,7 +123,7 @@ class swaposrsrs3 extends React.Component {
                                                         <Form.Control 
                                                             type="text" 
                                                             placeholder="OSRS"
-                                                            value={util.formatNumber(osrsAmount)} 
+                                                            value={(((osrsAmount*100)/100)).toFixed(2)} 
                                                             onChange={(e) => {this.onChangeAmounts(e, 'A');
                                                         }}/>
                                                         <InputGroup.Prepend>
@@ -145,7 +144,7 @@ class swaposrsrs3 extends React.Component {
                                                         <Form.Control 
                                                             type="text" 
                                                             placeholder="RS3" 
-                                                            value={util.formatNumber(rs3Amount)} 
+                                                            value={(((rs3Amount*100)/100)).toFixed(2)} 
                                                             onChange={(e) => {this.onChangeAmounts(e, 'B');
                                                         }}/>
                                                         <InputGroup.Prepend>
