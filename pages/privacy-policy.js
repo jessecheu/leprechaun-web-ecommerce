@@ -14,8 +14,8 @@ class Privacy extends React.Component {
         return (
             <div>
                 <Head>
-                    <title>RPGStock | Privacy Page</title>
-                    <meta name="description" content="RPGStock Privacy Policy" />
+                    <title>Inverted Silo | Privacy Page</title>
+                    <meta name="description" content="Inverted Silo Privacy Policy" />
                 </Head>
                 <Container>
                 <div style={{textAlign: 'center'}}>

@@ -1,5 +1,5 @@
 ---
-headerimage: /img/rpgstock-logo.png
-alttext: RPGStock Logo
+headerimage: /img/invertedsiloicon.png
+alttext: Inverted Silo Logo
 ---
 

@@ -8,7 +8,7 @@ export const NavBar = () => {
     return (
         <div>
             <ReactBootStrap.Navbar className="my-navbar" bg="light" expand="lg">
-            <ReactBootStrap.Navbar.Brand href="/"><img src={headerimage} alt={`${alttext}`} width="80px" height="25px"/></ReactBootStrap.Navbar.Brand>
+            <ReactBootStrap.Navbar.Brand href="/"><img src={headerimage} alt={`${alttext}`} width="45px" height="45px"/></ReactBootStrap.Navbar.Brand>
             <ReactBootStrap.Navbar.Toggle aria-controls="basic-navbar-nav" />
             <ReactBootStrap.Navbar.Collapse id="basic-navbar-nav">
                 <ReactBootStrap.Nav className="mr-auto">
@@ -23,20 +23,7 @@ export const NavBar = () => {
                         <ReactBootStrap.NavDropdown.Item href="/runescape/sell-runescape-3-gold">Sell Runescape 3 Gold</ReactBootStrap.NavDropdown.Item>
                         <ReactBootStrap.NavDropdown.Item href="/runescape/swap-rs3-osrs">Swap Runescape 3 to OSRS</ReactBootStrap.NavDropdown.Item>
                     <ReactBootStrap.NavDropdown.Divider />
-                    {/* <p><center>Runescape Accounts</center></p>
-                        <ReactBootStrap.NavDropdown.Item href="/runescape/rs-account-store">Runescape Accounts</ReactBootStrap.NavDropdown.Item>
-                    <ReactBootStrap.NavDropdown.Divider />
-                    <p><center>Old School Runescape Services (07)</center></p>
-                        <ReactBootStrap.NavDropdown.Item href="/runescape/osrs-questing-services">Old School Runescape Questing</ReactBootStrap.NavDropdown.Item>
-                        <ReactBootStrap.NavDropdown.Item href="/runescape/osrs-skilling-services">Old School Runescape Skilling</ReactBootStrap.NavDropdown.Item>
-                        <ReactBootStrap.NavDropdown.Item href="/runescape/osrs-minigame-services">Old School Runescape Minigame</ReactBootStrap.NavDropdown.Item>
-                    <ReactBootStrap.NavDropdown.Divider /> */}
-                </ReactBootStrap.NavDropdown>
-                <ReactBootStrap.NavDropdown title="Miscellaneous" id="basic-nav-dropdown">
-                    <ReactBootStrap.NavDropdown.Item href="/miscellaneous/video-game-giftcards">Video Game Giftcards</ReactBootStrap.NavDropdown.Item>
-                    <ReactBootStrap.NavDropdown.Divider />
-                    {/* <ReactBootStrap.NavDropdown.Item href="#action/3.4"><img src={NewIcon} alt="New-Icon" width="22px" height="22px"/> N/A</ReactBootStrap.NavDropdown.Item> */}
-                </ReactBootStrap.NavDropdown>   
+                </ReactBootStrap.NavDropdown> 
                 </ReactBootStrap.Nav>               
             </ReactBootStrap.Navbar.Collapse>
             </ReactBootStrap.Navbar>

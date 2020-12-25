@@ -9,37 +9,22 @@ import Head from 'next/head';
 import { UserContext } from '../utils/UserContext'
 
 function MyApp({ Component, pageProps }) {
-  const [user, setUser] = useState({})
+  const [ user, setUser ] = useState({})
 
 
   return(
     <div>
       <Head>
-        <title>RPGStock | Buy and Sell video game items</title>
+        <title>Inverted Silo | Buy and Sell video game items</title>
         <meta charSet="utf-8" />
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
         />
-        <link rel="icon" type="image/png" href="/rpgstock-icon-temp.png" />
-
-        {/* Start TrustPilot Script */}
-          <script type="text/javascript" 
-            src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async>
-          </script>
-        {/* End TrustPilot Script */}
+        <link rel="icon" type="image/png" href="/invertedsiloicon.png" />
 
         {/* Start Tawk.to Script  */}
-        <script type="text/javascript" dangerouslySetInnerHTML={{ __html: `var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-          (function(){
-          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-          s1.async=true;
-          s1.src='https://embed.tawk.to/5edb10009e5f6944228fffe1/default';
-          s1.charset='UTF-8';
-          s1.setAttribute('crossorigin','*');
-          s0.parentNode.insertBefore(s1,s0);
-          })();` 
-        }}/>
+          {/* Add Tawk.to Script for live chat */}
         {/* End Tawk.to Script  */}
 
       </Head>

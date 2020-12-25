@@ -5,19 +5,20 @@ import { attributes } from '../../content/footercomponent.md'
 const Footer = () => {
     const { text, icons, Sections, imagesectiontitle, imagesection, visualicons } = attributes;
     return(
-        <div className="main-footer" style={{padding: '4px', paddingTop: '0px', backgroundColor: 'white'}}>
+        <div style={{padding: '4px', paddingTop: '0px', backgroundColor: 'white'}}>
             <Container>
                 <Row>
                     {Sections && 
                         Sections.map((section,k) => (
                             <Col md={3} key={k}>
-                            <h4>{section.sectiontitle}</h4>
-                            <ul className="list-unstyled">
-                                {section && section.subsection.map((subsection, k) =>(
-                                    <li><a key={k} href={subsection.subsectionurl}>{subsection.subsectiontitle}</a></li>
-                                ))
-                                }
-                            </ul>
+                                <h4>{section.sectiontitle}</h4>
+                                <ul className="list-unstyled">
+                                    {section.subsection && 
+                                        section.subsection.map((subsection, k) =>(
+                                            <li><a key={k} href={subsection.subsectionurl}>{subsection.subsectiontitle}</a></li>
+                                        ))
+                                    }
+                                </ul>
                             </Col>
                         ))
                     }

@@ -16,7 +16,7 @@ const nextConfig = {
 }
 
 const Sitemap = configureSitemap({
-    baseUrl: 'https://rpgstock.com',
+    baseUrl: 'https://invertedsilo.com',
     exclude: ['/public/admin/*', '/public/admin', '/admin/*'],
     excludeIndex: true,
     pagesConfig: {

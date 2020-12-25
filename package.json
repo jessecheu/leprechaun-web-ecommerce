@@ -1,13 +1,12 @@
 {
-  "name": "rpgstock-nextjs",
+  "name": "leprechaun-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "npm run build && next export",
-    "generate-sitemap": "node sitemap-generator.js"
+    "export": "npm run build && next export"
   },
   "dependencies": {
     "@sergeymyssak/nextjs-sitemap": "^1.1.1",

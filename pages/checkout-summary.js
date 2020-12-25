@@ -1,7 +1,7 @@
 import React from 'react'
 import { UserContext } from '../utils/UserContext'
 import {Container, Row, Col, Button, ButtonGroup, Card} from 'react-bootstrap'
-import util from "../components/ExtraComponents/util.js"
+import util from "../utils/util.js"
 
 import Router from 'next/router'
 
@@ -33,6 +33,7 @@ class Checkout extends React.Component{
         email: "",
         characterName: "",
         couponCode: "N/A",
+        submitErrorMessage: "",
         modalShow: false
     }
 
@@ -83,9 +84,18 @@ class Checkout extends React.Component{
                 amountOfProduct: util.formatNumber(user.amount),
                 rateOfProduct: user.rate,
                 price: util.formatNumber(user.amount*user.rate),
+                paymentMethod: "",
                 characterName: user.characterName,
                 email: user.email
             })
+        }
+    }
+
+    onSubmit = (e) => {
+        if(this.state.paymentMethod !== ''){
+            this.setState({submitErrorMessage: " ", modalShow: true})
+        }else{
+            this.setState({submitErrorMessage: "*Please choose a payment method*"})
         }
     }
 
@@ -94,7 +104,7 @@ class Checkout extends React.Component{
     render(){
         const {product, amountOfProduct, 
         rateOfProduct, fees, estimatedFee, price, updatedRate, paymentMethod, 
-        registeredUserName, email, characterName, couponCode, modalShow} = this.state
+        registeredUserName, email, characterName, couponCode, submitErrorMessage, modalShow} = this.state
     
         return(
             <>
@@ -317,7 +327,10 @@ class Checkout extends React.Component{
                     
                 </Row>
                 <Row className="justify-content-center">
-                    <Button size="lg" style={{width: '450px', height: '100px', fontSize: '45px', fontWeight: 'bold'}} variant="warning" onClick={() => this.setState({modalShow: true})} >
+                    <h3 style={{color: 'red' }}>{submitErrorMessage}</h3>
+                </Row>
+                <Row className="justify-content-center">
+                    <Button size="lg" style={{width: '450px', height: '100px', fontSize: '45px', fontWeight: 'bold'}} variant="warning" onClick={this.onSubmit} >
                             Checkout ( ${price} )
                     </Button>
 

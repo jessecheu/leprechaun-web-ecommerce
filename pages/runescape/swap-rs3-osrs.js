@@ -3,11 +3,7 @@ import React from 'react'
 import Head from 'next/head';
 
 import {Container, Row, Col, Card, Button, Form, InputGroup} from 'react-bootstrap'
-import util from "../../components/ExtraComponents/util"
-
-import GeneralInformation from '../../components/layouts/GeneralInformation';
-import HowToBegin from '../../components/layouts/HowToBegin.js';
-import RWTInformation from '../../components/layouts/RWTInformation';
+import util from "../../utils/util"
 
 import { attributes, react as Content } from '../../content/pricingandrates.md';
 
@@ -105,8 +101,8 @@ class swaprs3osrs extends React.Component {
         return(
             <div>
                 <Head>
-                    <title>RPGStock | SWAP RS3 To OSRS</title>
-                    <meta name="description" content="RPGStock | SWAP Runescape 3 Gold (RS3 GP) To Old School Runescape Gold (07 GP) " />
+                    <title>Inverted Silo | SWAP RS3 To OSRS</title>
+                    <meta name="description" content="Inverted Silo | SWAP Runescape 3 Gold (RS3 GP) To Old School Runescape Gold (07 GP) " />
                 </Head>
                 <Container>
                     <Row className="justify-content-center">
@@ -173,9 +169,6 @@ class swaprs3osrs extends React.Component {
                     </Row>
                 </Container>
 
-                < RWTInformation />
-                < GeneralInformation />
-                < HowToBegin />
             </div>
         )
     }

@@ -1,4 +1,4 @@
-URL: www.RPGStock.com
+URL: www.invertedsilo.com
 
 NextJS / Netlify CMS Application
 

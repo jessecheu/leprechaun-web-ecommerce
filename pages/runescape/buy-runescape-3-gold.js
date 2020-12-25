@@ -1,9 +1,7 @@
 import React from 'react'
 import Head from 'next/head';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import GeneralInformation from '../../components/layouts/GeneralInformation';
-import HowToBegin from '../../components/layouts/HowToBegin.js';
-import RWTInformation from '../../components/layouts/RWTInformation';
+
 import RSGPBox from '../../components/ExtraComponents/RSGPBox'
 import {attributes, react as Content} from '../../content/pricingandrates.md'
 
@@ -20,7 +18,7 @@ function BuyRS3() {
         ) : (
             <>
             <Head>
-                <title>RPGStock | Purchase Runescape 3 Gold</title>
+                <title>Inverted Silo | Purchase Runescape 3 Gold</title>
                 <meta name="description" content="Purchase Runescape 3 Gold at the cheapest rate possible!" />
             </Head>
             <div style={{textAlign: 'center'}}>
@@ -38,7 +36,7 @@ function BuyRS3() {
                     <Col xs={5} className="left-positioned-text">
                         <h2>Process to Purchase Runescape 3 Gold</h2>
                         <p>
-                            1. Visit www.rpgstock.com
+                            1. Visit www.invertedsilo.com
                             < br/>
                             2. Go into the livechat at the bottom right of the website.
                             < br/>
@@ -89,10 +87,6 @@ function BuyRS3() {
                     </Col>
                 </Row>
             </Container>
-        
-            < RWTInformation />
-            < GeneralInformation />
-            < HowToBegin />
             </>
         )}
     </>

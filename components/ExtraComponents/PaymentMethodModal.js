@@ -22,7 +22,7 @@ function PaymentMethodModal(props) {
             <hr />
 
             Please <b>contact a live chat agent</b> using the bottom right live chat widget or
-              on add me on <b>discord: rpgstock#0777 UID: 574588629343797257  (Please beware of imposters)</b>
+              on add me on <b>discord: ABCD#0000 UID: 1234567891125  (Please beware of imposters)</b>
               and copy and paste the information below. 
             <br />
             <br />

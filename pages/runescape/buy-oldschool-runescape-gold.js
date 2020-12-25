@@ -2,9 +2,6 @@ import React from 'react'
 import Head from 'next/head';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
-import GeneralInformation from '../../components/layouts/GeneralInformation';
-import HowToBegin from '../../components/layouts/HowToBegin.js';
-import RWTInformation from '../../components/layouts/RWTInformation';
 import RSGPBox from '../../components/ExtraComponents/RSGPBox'
 import OSRSLogo from '../../assets/osrs-logo.png';
 
@@ -23,7 +20,7 @@ function BuyOSRS() {
         ) : (
             <>
             <Head>
-                <title>RPGStock | Purchase Old School Runescape Gold</title>
+                <title>Inverted Silo | Purchase Old School Runescape Gold</title>
                 <meta name="description" content="Purchase Old School Runescape Gold at the cheapest rate possible!" />
             </Head>
             <h1 style={{textAlign: 'center'}}>Buy Old School Runescape Gold</h1>
@@ -41,7 +38,7 @@ function BuyOSRS() {
                     <Col xs={5}>
                         <h2>Process to Purchase Old School Runescape Gold</h2>
                         <p>
-                            1. Visit www.rpgstock.com
+                            1. Visit www.invertedsilo.com
                             < br/>
                             2. Go into the livechat at the bottom right of the website.
                             < br/>
@@ -80,7 +77,7 @@ function BuyOSRS() {
                     <h2>What is Old School Runescape Gold</h2>
                         <p className="left-positioned-text">
                         Old School Runescape Gold is the virtual currency from the game 
-                        WWW.oldschool.runescape.com and the price ranges between 0.50 USD to 1.00 USD. 
+                        www.oldschool.runescape.com and the price ranges between 0.30 USD to 0.70 USD. 
                         Players purchase OSRS (07) gold to purchase high valued items and to progress 
                         their player status in the game. OSRS Gold can purchase many things like rare items 
                         and enable you to play at a different level of the game. OSRS GP can also be used to 
@@ -92,10 +89,6 @@ function BuyOSRS() {
                     </Col>
                 </Row>
             </Container>
-
-            < RWTInformation />
-            < GeneralInformation />
-            < HowToBegin /> 
             </>
         )}
     </>

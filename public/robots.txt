@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://www.rpgstock.com/sitemap.xml
+Sitemap: http://www.Inverted Silo.com/sitemap.xml

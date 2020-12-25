@@ -1,15 +1,12 @@
 import React from 'react'
 import Head from 'next/head';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import GeneralInformation from '../../components/layouts/GeneralInformation';
-import HowToBegin from '../../components/layouts/HowToBegin.js';
-import RWTInformation from '../../components/layouts/RWTInformation';
 
 function buyrs3() {
     return (
         <div>
         <Head>
-            <title>RPGStock | Sell Runescape 3 Gold</title>
+            <title>Inverted Silo | Sell Runescape 3 Gold</title>
             <meta name="description" content="Sell Runescape 3 Gold at the best and exclusive rate possible!" />
         </Head>
         <div style={{textAlign: 'center'}}>  
@@ -23,7 +20,7 @@ function buyrs3() {
                     <Col xs={5} className="left-positioned-text">
                         <h2>Process to Sell Runescape 3 Gold</h2>
                         <p>
-                            1. Visit www.rpgstock.com
+                            1. Visit www.Inverted Silo.com
                             < br/>
                             2. Go into the livechat at the bottom right of the website.
                             < br/>
@@ -59,10 +56,6 @@ function buyrs3() {
                     </Col>
                 </Row>
             </Container>
-
-            < RWTInformation />
-            < GeneralInformation />
-            < HowToBegin />
         </div>
     )
 }

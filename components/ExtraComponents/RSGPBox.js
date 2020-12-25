@@ -1,11 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react'
 import {Container, Row, Col, Card, Button, Form, InputGroup} from 'react-bootstrap'
-import util from "./util"
+import util from "../../utils/util"
 import validator from 'validator'
 
 import Router, {useRouter, withRouter} from 'next/router'
 
-import {UserContext} from '../../utils/UserContext'
+import { UserContext } from '../../utils/UserContext'
 
 
 const initialState = {
