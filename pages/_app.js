@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
   return(
     <div>
       <Head>
-        <title>Inverted Silo | Buy and Sell video game items</title>
+        <title>BareWorks | Buy and Sell video game items</title>
         <meta charSet="utf-8" />
           <meta
             name="viewport"

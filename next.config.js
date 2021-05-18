@@ -16,7 +16,7 @@ const nextConfig = {
 }
 
 const Sitemap = configureSitemap({
-    baseUrl: 'https://invertedsilo.com',
+    baseUrl: 'https://bareworks.net',
     exclude: ['/public/admin/*', '/public/admin', '/admin/*'],
     excludeIndex: true,
     pagesConfig: {

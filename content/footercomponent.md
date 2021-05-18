@@ -1,7 +1,7 @@
 ---
-text: Inverted Silo | All Rights Reserved |
+text: Bare Works | All Rights Reserved |
 Sections:
-  - sectiontitle: Inverted Silo
+  - sectiontitle: BareWorks
   - sectiontitle: Support
     subsection:
       - subsectiontitle: Payment Methods
@@ -12,6 +12,6 @@ Sections:
         subsectionurl: /terms-of-service
       - subsectiontitle: Privacy Policy
         subsectionurl: /privacy-policy
-imagesectiontitle: Payment Methods
+imagesectiontitle: Extra
 ---
 
