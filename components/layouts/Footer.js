@@ -34,8 +34,21 @@ const Footer = () => {
                     </Col>
                 </Row>
                 <hr />
+                <Row className="justify-content-center">
+                    {visualicons &&
+                        visualicons.map((singleicon, k) => (
+                            <a key={k} href="/paymentmethods"><img src={singleicon.icons} alt={singleicon.alttext} height="30px" width="30px"/></a>
+                        ))
+                    }        
+                </Row>
+                <hr />
+                <Row>
+                    <p style={{color: 'white'}}>
+                        This website was developed by <a style={{color: 'white', display: 'inline-block', pointerEvents: 'none' }} href="https://invertedsilo.com" target="__blank">Inverted Silo Solutions</a>
+                    </p>
+                </Row>
                 <Row className="text-center">
-                    <p  className="col-sm"> &copy; 2021 - {new Date().getFullYear()} {text}
+                    <p  className="col-sm"> &copy; 2017 - {new Date().getFullYear()} {text}
                         {icons && icons.map((icon, k)=> (
                             <a key={k} target="_target" rel="noopener noreferrer" href={icon.url}><img src={icon.picture} alt={icon.alttext} width="auto" height="25px"/></a>
                         ))}

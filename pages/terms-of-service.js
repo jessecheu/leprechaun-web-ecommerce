@@ -14,8 +14,8 @@ class termsofservice extends React.Component {
     return (
         <div>
             <Head>
-                <title>BareWorks | Terms of Service</title>
-                <meta name="description" content="BareWorks Terms of Service" />
+                <title>Inverted Silo | Terms of Service</title>
+                <meta name="description" content="Inverted Silo Terms of Service" />
             </Head>
             <Container>
                 <div style={{textAlign: 'center'}}>
@@ -24,7 +24,7 @@ class termsofservice extends React.Component {
                     <p>Please read these terms and conditions carefully before using our service.</p>
                 </div>
                     <TosContent />
-                <p>If you have any questions about these Terms and Conditions, You can contact us at admin@bareworks.net</p>
+                <p>If you have any questions about these Terms and Conditions, You can contact us at admin@Inverted Silo.com</p>
                 <br />
             </Container>
         </div>

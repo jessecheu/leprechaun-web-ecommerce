@@ -11,8 +11,8 @@ class PaymentMethods extends React.Component{
         return (
             <div>
             <Head>
-                <title>BareWorks | Payment Method and Options</title>
-                <meta name="description" content="BareWorks Available Payment Method and Options" />
+                <title>Inverted Silo | Payment Method and Options</title>
+                <meta name="description" content="Inverted Silo Available Payment Method and Options" />
             </Head>
             <Container fluid>  
                 <Row className="justify-content-center">

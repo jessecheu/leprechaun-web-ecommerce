@@ -1,5 +1,5 @@
 ---
-headerimage: /img/bareworksicon.png
-alttext: Bare Works Logo
+headerimage: /img/invertedsiloicon.png
+alttext: Inverted Silo Logo
 ---
 
